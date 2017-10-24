@@ -1,0 +1,940 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B8F84617C7C010D66BE31E61 /* Pods_discountcooking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05A6845439632DAECFE52802 /* Pods_discountcooking.framework */; };
+		D51E119F1F949A8C00962876 /* gravity in Resources */ = {isa = PBXBuildFile; fileRef = D51E119E1F949A7600962876 /* gravity */; };
+		D51E11A11F949AC900962876 /* Gravity-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = D51E11A01F949AC900962876 /* Gravity-Light.otf */; };
+		D51E11A31F949F2000962876 /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51E11A21F949F2000962876 /* constants.swift */; };
+		D51E11A51F94A2B600962876 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51E11A41F94A2B600962876 /* LoginController.swift */; };
+		D54FEECD1F94A31400E404C7 /* SignupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54FEECC1F94A31400E404C7 /* SignupController.swift */; };
+		D54FEEF01F94AA9300E404C7 /* KaedeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54FEEEF1F94AA9300E404C7 /* KaedeTextField.swift */; };
+		D54FEEF11F94AAAA00E404C7 /* TextFieldEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54FEED91F94A6AE00E404C7 /* TextFieldEffects.swift */; };
+		D550785A1F948B3100375C5B /* InitialController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55078591F948B3100375C5B /* InitialController.swift */; };
+		D550785C1F9492E300375C5B /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D550785B1F9492E300375C5B /* extensions.swift */; };
+		D55B53611F940DC300C13C47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55B53601F940DC300C13C47 /* AppDelegate.swift */; };
+		D55B53631F940DC300C13C47 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55B53621F940DC300C13C47 /* ViewController.swift */; };
+		D55B53661F940DC300C13C47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D55B53641F940DC300C13C47 /* Main.storyboard */; };
+		D55B53681F940DC300C13C47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D55B53671F940DC300C13C47 /* Assets.xcassets */; };
+		D55B536B1F940DC300C13C47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D55B53691F940DC300C13C47 /* LaunchScreen.storyboard */; };
+		D55B53761F940DC300C13C47 /* discountcookingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55B53751F940DC300C13C47 /* discountcookingTests.swift */; };
+		D55B53811F940DC300C13C47 /* discountcookingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55B53801F940DC300C13C47 /* discountcookingUITests.swift */; };
+		D56C94311F958EF00056BCCE /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56C94301F958EF00056BCCE /* Recipe.swift */; };
+		D56C94351F958F220056BCCE /* RecipeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56C94341F958F220056BCCE /* RecipeController.swift */; };
+		D5956A5E1F972ABA0088BB47 /* recipeControllerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5956A5D1F972ABA0088BB47 /* recipeControllerCell.swift */; };
+		D5956A601F972C190088BB47 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5956A5F1F972C190088BB47 /* Restaurant.swift */; };
+		D5956A621F972C450088BB47 /* Coupon.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5956A611F972C450088BB47 /* Coupon.swift */; };
+		D5956A641F981B830088BB47 /* seed.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5956A631F981B830088BB47 /* seed.swift */; };
+		DC4FB782315734CA528DB74C /* Pods_discountcookingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 399315F96EA5B74B3F3C618D /* Pods_discountcookingTests.framework */; };
+		E5A203801B3E8E1624FFC326 /* Pods_discountcookingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C0F6A3EC6DF41141874C226 /* Pods_discountcookingUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D54FEEEA1F94A6AE00E404C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D54FEEDC1F94A6AE00E404C7 /* TextFieldEffects.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4CBF766D1A71AF7700073B6A;
+			remoteInfo = TextFieldsDemo;
+		};
+		D54FEEEC1F94A6AE00E404C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D54FEEDC1F94A6AE00E404C7 /* TextFieldEffects.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4CB3B6CE1AA8DEA7000AFA56;
+			remoteInfo = TextFieldEffects;
+		};
+		D55B53721F940DC300C13C47 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D55B53551F940DC300C13C47 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D55B535C1F940DC300C13C47;
+			remoteInfo = discountcooking;
+		};
+		D55B537D1F940DC300C13C47 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D55B53551F940DC300C13C47 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D55B535C1F940DC300C13C47;
+			remoteInfo = discountcooking;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		05A6845439632DAECFE52802 /* Pods_discountcooking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_discountcooking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A73A20131FFF6F4228263A2 /* Pods-discountcooking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-discountcooking.release.xcconfig"; path = "Pods/Target Support Files/Pods-discountcooking/Pods-discountcooking.release.xcconfig"; sourceTree = "<group>"; };
+		24424155FCA055EC0D413A57 /* Pods-discountcookingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-discountcookingUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-discountcookingUITests/Pods-discountcookingUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		246E21C92164AC1619951B44 /* Pods-discountcookingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-discountcookingUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-discountcookingUITests/Pods-discountcookingUITests.release.xcconfig"; sourceTree = "<group>"; };
+		399315F96EA5B74B3F3C618D /* Pods_discountcookingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_discountcookingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		62DC55B5D0AE3734FECBFF30 /* Pods-discountcooking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-discountcooking.debug.xcconfig"; path = "Pods/Target Support Files/Pods-discountcooking/Pods-discountcooking.debug.xcconfig"; sourceTree = "<group>"; };
+		7C0F6A3EC6DF41141874C226 /* Pods_discountcookingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_discountcookingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBCE166BA40D33FA29AF5C0C /* Pods-discountcookingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-discountcookingTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-discountcookingTests/Pods-discountcookingTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D51E119E1F949A7600962876 /* gravity */ = {isa = PBXFileReference; lastKnownFileType = folder; path = gravity; sourceTree = "<group>"; };
+		D51E11A01F949AC900962876 /* Gravity-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gravity-Light.otf"; sourceTree = "<group>"; };
+		D51E11A21F949F2000962876 /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
+		D51E11A41F94A2B600962876 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		D54FEECC1F94A31400E404C7 /* SignupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupController.swift; sourceTree = "<group>"; };
+		D54FEED01F94A6AE00E404C7 /* AkiraTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AkiraTextField.swift; sourceTree = "<group>"; };
+		D54FEED11F94A6AE00E404C7 /* HoshiTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoshiTextField.swift; sourceTree = "<group>"; };
+		D54FEED21F94A6AE00E404C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D54FEED31F94A6AE00E404C7 /* IsaoTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsaoTextField.swift; sourceTree = "<group>"; };
+		D54FEED41F94A6AE00E404C7 /* JiroTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JiroTextField.swift; sourceTree = "<group>"; };
+		D54FEED51F94A6AE00E404C7 /* KaedeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaedeTextField.swift; sourceTree = "<group>"; };
+		D54FEED61F94A6AE00E404C7 /* MadokaTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MadokaTextField.swift; sourceTree = "<group>"; };
+		D54FEED71F94A6AE00E404C7 /* MinoruTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinoruTextField.swift; sourceTree = "<group>"; };
+		D54FEED81F94A6AE00E404C7 /* TextFieldEffects.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextFieldEffects.h; sourceTree = "<group>"; };
+		D54FEED91F94A6AE00E404C7 /* TextFieldEffects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldEffects.swift; sourceTree = "<group>"; };
+		D54FEEDA1F94A6AE00E404C7 /* YokoTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YokoTextField.swift; sourceTree = "<group>"; };
+		D54FEEDB1F94A6AE00E404C7 /* YoshikoTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoshikoTextField.swift; sourceTree = "<group>"; };
+		D54FEEDC1F94A6AE00E404C7 /* TextFieldEffects.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = TextFieldEffects.xcodeproj; sourceTree = "<group>"; };
+		D54FEEEF1F94AA9300E404C7 /* KaedeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaedeTextField.swift; sourceTree = "<group>"; };
+		D55078591F948B3100375C5B /* InitialController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialController.swift; sourceTree = "<group>"; };
+		D550785B1F9492E300375C5B /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
+		D55B535D1F940DC300C13C47 /* discountcooking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = discountcooking.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D55B53601F940DC300C13C47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D55B53621F940DC300C13C47 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D55B53651F940DC300C13C47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D55B53671F940DC300C13C47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D55B536A1F940DC300C13C47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D55B536C1F940DC300C13C47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D55B53711F940DC300C13C47 /* discountcookingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = discountcookingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D55B53751F940DC300C13C47 /* discountcookingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = discountcookingTests.swift; sourceTree = "<group>"; };
+		D55B53771F940DC300C13C47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D55B537C1F940DC300C13C47 /* discountcookingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = discountcookingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D55B53801F940DC300C13C47 /* discountcookingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = discountcookingUITests.swift; sourceTree = "<group>"; };
+		D55B53821F940DC300C13C47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D56C94301F958EF00056BCCE /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		D56C94341F958F220056BCCE /* RecipeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeController.swift; sourceTree = "<group>"; };
+		D5956A5D1F972ABA0088BB47 /* recipeControllerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recipeControllerCell.swift; sourceTree = "<group>"; };
+		D5956A5F1F972C190088BB47 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		D5956A611F972C450088BB47 /* Coupon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coupon.swift; sourceTree = "<group>"; };
+		D5956A631F981B830088BB47 /* seed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = seed.swift; sourceTree = "<group>"; };
+		E8C63A7A0308879D97E5B11D /* Pods-discountcookingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-discountcookingTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-discountcookingTests/Pods-discountcookingTests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D55B535A1F940DC300C13C47 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8F84617C7C010D66BE31E61 /* Pods_discountcooking.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D55B536E1F940DC300C13C47 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC4FB782315734CA528DB74C /* Pods_discountcookingTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D55B53791F940DC300C13C47 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5A203801B3E8E1624FFC326 /* Pods_discountcookingUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		86B20862D6B1978B33A04FED /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				62DC55B5D0AE3734FECBFF30 /* Pods-discountcooking.debug.xcconfig */,
+				0A73A20131FFF6F4228263A2 /* Pods-discountcooking.release.xcconfig */,
+				CBCE166BA40D33FA29AF5C0C /* Pods-discountcookingTests.debug.xcconfig */,
+				E8C63A7A0308879D97E5B11D /* Pods-discountcookingTests.release.xcconfig */,
+				24424155FCA055EC0D413A57 /* Pods-discountcookingUITests.debug.xcconfig */,
+				246E21C92164AC1619951B44 /* Pods-discountcookingUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8EBC2B82A64B3815A63AA846 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				05A6845439632DAECFE52802 /* Pods_discountcooking.framework */,
+				399315F96EA5B74B3F3C618D /* Pods_discountcookingTests.framework */,
+				7C0F6A3EC6DF41141874C226 /* Pods_discountcookingUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D54FEECE1F94A6AE00E404C7 /* TextFieldEffects */ = {
+			isa = PBXGroup;
+			children = (
+				D54FEECF1F94A6AE00E404C7 /* TextFieldEffects */,
+				D54FEEDC1F94A6AE00E404C7 /* TextFieldEffects.xcodeproj */,
+			);
+			path = TextFieldEffects;
+			sourceTree = "<group>";
+		};
+		D54FEECF1F94A6AE00E404C7 /* TextFieldEffects */ = {
+			isa = PBXGroup;
+			children = (
+				D54FEED01F94A6AE00E404C7 /* AkiraTextField.swift */,
+				D54FEED11F94A6AE00E404C7 /* HoshiTextField.swift */,
+				D54FEED21F94A6AE00E404C7 /* Info.plist */,
+				D54FEED31F94A6AE00E404C7 /* IsaoTextField.swift */,
+				D54FEED41F94A6AE00E404C7 /* JiroTextField.swift */,
+				D54FEED51F94A6AE00E404C7 /* KaedeTextField.swift */,
+				D54FEED61F94A6AE00E404C7 /* MadokaTextField.swift */,
+				D54FEED71F94A6AE00E404C7 /* MinoruTextField.swift */,
+				D54FEED81F94A6AE00E404C7 /* TextFieldEffects.h */,
+				D54FEEDA1F94A6AE00E404C7 /* YokoTextField.swift */,
+				D54FEEDB1F94A6AE00E404C7 /* YoshikoTextField.swift */,
+			);
+			path = TextFieldEffects;
+			sourceTree = "<group>";
+		};
+		D54FEEDD1F94A6AE00E404C7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D54FEEEB1F94A6AE00E404C7 /* TextFieldsDemo.app */,
+				D54FEEED1F94A6AE00E404C7 /* TextFieldEffects.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D54FEEEE1F94AA7400E404C7 /* ViewElements */ = {
+			isa = PBXGroup;
+			children = (
+				D54FEED91F94A6AE00E404C7 /* TextFieldEffects.swift */,
+				D54FEEEF1F94AA9300E404C7 /* KaedeTextField.swift */,
+			);
+			path = ViewElements;
+			sourceTree = "<group>";
+		};
+		D55B53541F940DC300C13C47 = {
+			isa = PBXGroup;
+			children = (
+				D51E11A01F949AC900962876 /* Gravity-Light.otf */,
+				D54FEECE1F94A6AE00E404C7 /* TextFieldEffects */,
+				D51E119E1F949A7600962876 /* gravity */,
+				D55B535F1F940DC300C13C47 /* discountcooking */,
+				D55B53741F940DC300C13C47 /* discountcookingTests */,
+				D55B537F1F940DC300C13C47 /* discountcookingUITests */,
+				D55B535E1F940DC300C13C47 /* Products */,
+				86B20862D6B1978B33A04FED /* Pods */,
+				8EBC2B82A64B3815A63AA846 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D55B535E1F940DC300C13C47 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D55B535D1F940DC300C13C47 /* discountcooking.app */,
+				D55B53711F940DC300C13C47 /* discountcookingTests.xctest */,
+				D55B537C1F940DC300C13C47 /* discountcookingUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D55B535F1F940DC300C13C47 /* discountcooking */ = {
+			isa = PBXGroup;
+			children = (
+				D55B538E1F940DCE00C13C47 /* Model */,
+				D5956A5A1F972A5B0088BB47 /* cells */,
+				D54FEEEE1F94AA7400E404C7 /* ViewElements */,
+				D55B538F1F940DD400C13C47 /* Controller */,
+				D55B53601F940DC300C13C47 /* AppDelegate.swift */,
+				D55B53621F940DC300C13C47 /* ViewController.swift */,
+				D55B53641F940DC300C13C47 /* Main.storyboard */,
+				D55B53671F940DC300C13C47 /* Assets.xcassets */,
+				D55B53691F940DC300C13C47 /* LaunchScreen.storyboard */,
+				D55B536C1F940DC300C13C47 /* Info.plist */,
+				D550785B1F9492E300375C5B /* extensions.swift */,
+				D5956A631F981B830088BB47 /* seed.swift */,
+			);
+			path = discountcooking;
+			sourceTree = "<group>";
+		};
+		D55B53741F940DC300C13C47 /* discountcookingTests */ = {
+			isa = PBXGroup;
+			children = (
+				D55B53751F940DC300C13C47 /* discountcookingTests.swift */,
+				D55B53771F940DC300C13C47 /* Info.plist */,
+			);
+			path = discountcookingTests;
+			sourceTree = "<group>";
+		};
+		D55B537F1F940DC300C13C47 /* discountcookingUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D55B53801F940DC300C13C47 /* discountcookingUITests.swift */,
+				D55B53821F940DC300C13C47 /* Info.plist */,
+			);
+			path = discountcookingUITests;
+			sourceTree = "<group>";
+		};
+		D55B538E1F940DCE00C13C47 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D51E11A21F949F2000962876 /* constants.swift */,
+				D56C94301F958EF00056BCCE /* Recipe.swift */,
+				D5956A5F1F972C190088BB47 /* Restaurant.swift */,
+				D5956A611F972C450088BB47 /* Coupon.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D55B538F1F940DD400C13C47 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D55078591F948B3100375C5B /* InitialController.swift */,
+				D51E11A41F94A2B600962876 /* LoginController.swift */,
+				D54FEECC1F94A31400E404C7 /* SignupController.swift */,
+				D56C94341F958F220056BCCE /* RecipeController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D5956A5A1F972A5B0088BB47 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				D5956A5D1F972ABA0088BB47 /* recipeControllerCell.swift */,
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D55B535C1F940DC300C13C47 /* discountcooking */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D55B53851F940DC300C13C47 /* Build configuration list for PBXNativeTarget "discountcooking" */;
+			buildPhases = (
+				7470BBAD12755B97E6EBBC35 /* [CP] Check Pods Manifest.lock */,
+				D55B53591F940DC300C13C47 /* Sources */,
+				D55B535A1F940DC300C13C47 /* Frameworks */,
+				D55B535B1F940DC300C13C47 /* Resources */,
+				F9DE6F4C15CDBC3763B7ADD2 /* [CP] Embed Pods Frameworks */,
+				C2D69B1267E595C643D2E924 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = discountcooking;
+			productName = discountcooking;
+			productReference = D55B535D1F940DC300C13C47 /* discountcooking.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D55B53701F940DC300C13C47 /* discountcookingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D55B53881F940DC300C13C47 /* Build configuration list for PBXNativeTarget "discountcookingTests" */;
+			buildPhases = (
+				BFA90843AB7AF5E9295C5878 /* [CP] Check Pods Manifest.lock */,
+				D55B536D1F940DC300C13C47 /* Sources */,
+				D55B536E1F940DC300C13C47 /* Frameworks */,
+				D55B536F1F940DC300C13C47 /* Resources */,
+				3E803DCE243D2703DC024CAB /* [CP] Embed Pods Frameworks */,
+				AE346752064567C1C0CBCB27 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D55B53731F940DC300C13C47 /* PBXTargetDependency */,
+			);
+			name = discountcookingTests;
+			productName = discountcookingTests;
+			productReference = D55B53711F940DC300C13C47 /* discountcookingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D55B537B1F940DC300C13C47 /* discountcookingUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D55B538B1F940DC300C13C47 /* Build configuration list for PBXNativeTarget "discountcookingUITests" */;
+			buildPhases = (
+				C6DFB19AFE0D9B7EF79C51E5 /* [CP] Check Pods Manifest.lock */,
+				D55B53781F940DC300C13C47 /* Sources */,
+				D55B53791F940DC300C13C47 /* Frameworks */,
+				D55B537A1F940DC300C13C47 /* Resources */,
+				0CE88D26A973C61A8DBDB5F5 /* [CP] Embed Pods Frameworks */,
+				804F3D7DF18D5652A555FBC3 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D55B537E1F940DC300C13C47 /* PBXTargetDependency */,
+			);
+			name = discountcookingUITests;
+			productName = discountcookingUITests;
+			productReference = D55B537C1F940DC300C13C47 /* discountcookingUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D55B53551F940DC300C13C47 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Kaahan Radia";
+				TargetAttributes = {
+					D55B535C1F940DC300C13C47 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					D55B53701F940DC300C13C47 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D55B535C1F940DC300C13C47;
+					};
+					D55B537B1F940DC300C13C47 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D55B535C1F940DC300C13C47;
+					};
+				};
+			};
+			buildConfigurationList = D55B53581F940DC300C13C47 /* Build configuration list for PBXProject "discountcooking" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D55B53541F940DC300C13C47;
+			productRefGroup = D55B535E1F940DC300C13C47 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = D54FEEDD1F94A6AE00E404C7 /* Products */;
+					ProjectRef = D54FEEDC1F94A6AE00E404C7 /* TextFieldEffects.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				D55B535C1F940DC300C13C47 /* discountcooking */,
+				D55B53701F940DC300C13C47 /* discountcookingTests */,
+				D55B537B1F940DC300C13C47 /* discountcookingUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		D54FEEEB1F94A6AE00E404C7 /* TextFieldsDemo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = TextFieldsDemo.app;
+			remoteRef = D54FEEEA1F94A6AE00E404C7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D54FEEED1F94A6AE00E404C7 /* TextFieldEffects.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = TextFieldEffects.framework;
+			remoteRef = D54FEEEC1F94A6AE00E404C7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D55B535B1F940DC300C13C47 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D55B536B1F940DC300C13C47 /* LaunchScreen.storyboard in Resources */,
+				D51E119F1F949A8C00962876 /* gravity in Resources */,
+				D55B53681F940DC300C13C47 /* Assets.xcassets in Resources */,
+				D55B53661F940DC300C13C47 /* Main.storyboard in Resources */,
+				D51E11A11F949AC900962876 /* Gravity-Light.otf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D55B536F1F940DC300C13C47 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D55B537A1F940DC300C13C47 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0CE88D26A973C61A8DBDB5F5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-discountcookingUITests/Pods-discountcookingUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3E803DCE243D2703DC024CAB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-discountcookingTests/Pods-discountcookingTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7470BBAD12755B97E6EBBC35 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-discountcooking-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		804F3D7DF18D5652A555FBC3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-discountcookingUITests/Pods-discountcookingUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AE346752064567C1C0CBCB27 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-discountcookingTests/Pods-discountcookingTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BFA90843AB7AF5E9295C5878 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-discountcookingTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C2D69B1267E595C643D2E924 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-discountcooking/Pods-discountcooking-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C6DFB19AFE0D9B7EF79C51E5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-discountcookingUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F9DE6F4C15CDBC3763B7ADD2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-discountcooking/Pods-discountcooking-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-discountcooking/Pods-discountcooking-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D55B53591F940DC300C13C47 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5956A601F972C190088BB47 /* Restaurant.swift in Sources */,
+				D55B53631F940DC300C13C47 /* ViewController.swift in Sources */,
+				D5956A5E1F972ABA0088BB47 /* recipeControllerCell.swift in Sources */,
+				D51E11A51F94A2B600962876 /* LoginController.swift in Sources */,
+				D5956A641F981B830088BB47 /* seed.swift in Sources */,
+				D54FEEF01F94AA9300E404C7 /* KaedeTextField.swift in Sources */,
+				D54FEECD1F94A31400E404C7 /* SignupController.swift in Sources */,
+				D550785A1F948B3100375C5B /* InitialController.swift in Sources */,
+				D55B53611F940DC300C13C47 /* AppDelegate.swift in Sources */,
+				D51E11A31F949F2000962876 /* constants.swift in Sources */,
+				D550785C1F9492E300375C5B /* extensions.swift in Sources */,
+				D54FEEF11F94AAAA00E404C7 /* TextFieldEffects.swift in Sources */,
+				D56C94351F958F220056BCCE /* RecipeController.swift in Sources */,
+				D56C94311F958EF00056BCCE /* Recipe.swift in Sources */,
+				D5956A621F972C450088BB47 /* Coupon.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D55B536D1F940DC300C13C47 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D55B53761F940DC300C13C47 /* discountcookingTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D55B53781F940DC300C13C47 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D55B53811F940DC300C13C47 /* discountcookingUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D55B53731F940DC300C13C47 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D55B535C1F940DC300C13C47 /* discountcooking */;
+			targetProxy = D55B53721F940DC300C13C47 /* PBXContainerItemProxy */;
+		};
+		D55B537E1F940DC300C13C47 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D55B535C1F940DC300C13C47 /* discountcooking */;
+			targetProxy = D55B537D1F940DC300C13C47 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D55B53641F940DC300C13C47 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D55B53651F940DC300C13C47 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D55B53691F940DC300C13C47 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D55B536A1F940DC300C13C47 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D55B53831F940DC300C13C47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D55B53841F940DC300C13C47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D55B53861F940DC300C13C47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 62DC55B5D0AE3734FECBFF30 /* Pods-discountcooking.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = discountcooking/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kaahan.discountcooking;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D55B53871F940DC300C13C47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A73A20131FFF6F4228263A2 /* Pods-discountcooking.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = discountcooking/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kaahan.discountcooking;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D55B53891F940DC300C13C47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBCE166BA40D33FA29AF5C0C /* Pods-discountcookingTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = discountcookingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kaahan.discountcookingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/discountcooking.app/discountcooking";
+			};
+			name = Debug;
+		};
+		D55B538A1F940DC300C13C47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8C63A7A0308879D97E5B11D /* Pods-discountcookingTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = discountcookingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kaahan.discountcookingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/discountcooking.app/discountcooking";
+			};
+			name = Release;
+		};
+		D55B538C1F940DC300C13C47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24424155FCA055EC0D413A57 /* Pods-discountcookingUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = discountcookingUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kaahan.discountcookingUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = discountcooking;
+			};
+			name = Debug;
+		};
+		D55B538D1F940DC300C13C47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 246E21C92164AC1619951B44 /* Pods-discountcookingUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = discountcookingUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kaahan.discountcookingUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = discountcooking;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D55B53581F940DC300C13C47 /* Build configuration list for PBXProject "discountcooking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D55B53831F940DC300C13C47 /* Debug */,
+				D55B53841F940DC300C13C47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D55B53851F940DC300C13C47 /* Build configuration list for PBXNativeTarget "discountcooking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D55B53861F940DC300C13C47 /* Debug */,
+				D55B53871F940DC300C13C47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D55B53881F940DC300C13C47 /* Build configuration list for PBXNativeTarget "discountcookingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D55B53891F940DC300C13C47 /* Debug */,
+				D55B538A1F940DC300C13C47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D55B538B1F940DC300C13C47 /* Build configuration list for PBXNativeTarget "discountcookingUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D55B538C1F940DC300C13C47 /* Debug */,
+				D55B538D1F940DC300C13C47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D55B53551F940DC300C13C47 /* Project object */;
+}

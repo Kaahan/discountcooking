@@ -1,0 +1,22 @@
+
+platform :ios, '9.0'
+
+target 'discountcooking' do
+  use_frameworks!
+
+  # Pods for discountcooking
+
+  pod 'Alamofire', '~> 4.5'
+
+
+  target 'discountcookingTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'discountcookingUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
