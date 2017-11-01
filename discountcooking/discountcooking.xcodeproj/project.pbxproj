@@ -26,6 +26,10 @@
 		D55B53811F940DC300C13C47 /* discountcookingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55B53801F940DC300C13C47 /* discountcookingUITests.swift */; };
 		D56C94311F958EF00056BCCE /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56C94301F958EF00056BCCE /* Recipe.swift */; };
 		D56C94351F958F220056BCCE /* RecipeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56C94341F958F220056BCCE /* RecipeController.swift */; };
+		D575D3DF1F9FAB35006EE35A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D575D3DE1F9FAB35006EE35A /* GoogleService-Info.plist */; };
+		D575D3E21FA18798006EE35A /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D575D3E11FA18798006EE35A /* ProfileController.swift */; };
+		D575D3E61FA1891E006EE35A /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D575D3E51FA1891E006EE35A /* CurrentUser.swift */; };
+		D575D3E81FA18971006EE35A /* RecipeFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = D575D3E71FA18971006EE35A /* RecipeFeed.swift */; };
 		D5956A5E1F972ABA0088BB47 /* recipeControllerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5956A5D1F972ABA0088BB47 /* recipeControllerCell.swift */; };
 		D5956A601F972C190088BB47 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5956A5F1F972C190088BB47 /* Restaurant.swift */; };
 		D5956A621F972C450088BB47 /* Coupon.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5956A611F972C450088BB47 /* Coupon.swift */; };
@@ -110,6 +114,10 @@
 		D55B53821F940DC300C13C47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D56C94301F958EF00056BCCE /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		D56C94341F958F220056BCCE /* RecipeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeController.swift; sourceTree = "<group>"; };
+		D575D3DE1F9FAB35006EE35A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D575D3E11FA18798006EE35A /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
+		D575D3E51FA1891E006EE35A /* CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
+		D575D3E71FA18971006EE35A /* RecipeFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeFeed.swift; sourceTree = "<group>"; };
 		D5956A5D1F972ABA0088BB47 /* recipeControllerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recipeControllerCell.swift; sourceTree = "<group>"; };
 		D5956A5F1F972C190088BB47 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		D5956A611F972C450088BB47 /* Coupon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coupon.swift; sourceTree = "<group>"; };
@@ -217,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				D51E11A01F949AC900962876 /* Gravity-Light.otf */,
+				D575D3DE1F9FAB35006EE35A /* GoogleService-Info.plist */,
 				D54FEECE1F94A6AE00E404C7 /* TextFieldEffects */,
 				D51E119E1F949A7600962876 /* gravity */,
 				D55B535F1F940DC300C13C47 /* discountcooking */,
@@ -282,6 +291,8 @@
 				D56C94301F958EF00056BCCE /* Recipe.swift */,
 				D5956A5F1F972C190088BB47 /* Restaurant.swift */,
 				D5956A611F972C450088BB47 /* Coupon.swift */,
+				D575D3E51FA1891E006EE35A /* CurrentUser.swift */,
+				D575D3E71FA18971006EE35A /* RecipeFeed.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -293,6 +304,7 @@
 				D51E11A41F94A2B600962876 /* LoginController.swift */,
 				D54FEECC1F94A31400E404C7 /* SignupController.swift */,
 				D56C94341F958F220056BCCE /* RecipeController.swift */,
+				D575D3E11FA18798006EE35A /* ProfileController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -448,6 +460,7 @@
 				D51E119F1F949A8C00962876 /* gravity in Resources */,
 				D55B53681F940DC300C13C47 /* Assets.xcassets in Resources */,
 				D55B53661F940DC300C13C47 /* Main.storyboard in Resources */,
+				D575D3DF1F9FAB35006EE35A /* GoogleService-Info.plist in Resources */,
 				D51E11A11F949AC900962876 /* Gravity-Light.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -606,10 +619,22 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-discountcooking/Pods-discountcooking-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -630,12 +655,15 @@
 				D5956A641F981B830088BB47 /* seed.swift in Sources */,
 				D54FEEF01F94AA9300E404C7 /* KaedeTextField.swift in Sources */,
 				D54FEECD1F94A31400E404C7 /* SignupController.swift in Sources */,
+				D575D3E21FA18798006EE35A /* ProfileController.swift in Sources */,
 				D550785A1F948B3100375C5B /* InitialController.swift in Sources */,
 				D55B53611F940DC300C13C47 /* AppDelegate.swift in Sources */,
 				D51E11A31F949F2000962876 /* constants.swift in Sources */,
+				D575D3E61FA1891E006EE35A /* CurrentUser.swift in Sources */,
 				D550785C1F9492E300375C5B /* extensions.swift in Sources */,
 				D54FEEF11F94AAAA00E404C7 /* TextFieldEffects.swift in Sources */,
 				D56C94351F958F220056BCCE /* RecipeController.swift in Sources */,
+				D575D3E81FA18971006EE35A /* RecipeFeed.swift in Sources */,
 				D56C94311F958EF00056BCCE /* Recipe.swift in Sources */,
 				D5956A621F972C450088BB47 /* Coupon.swift in Sources */,
 			);

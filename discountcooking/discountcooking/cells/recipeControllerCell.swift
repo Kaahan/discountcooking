@@ -11,4 +11,9 @@ import UIKit
 
 class recipeControllerCell: UITableViewCell {
     
+    
+    @IBOutlet weak var recipeImageView: UIImageView!
+    @IBOutlet weak var recipeCellName: UILabel!
+    @IBOutlet weak var recipeShortDescription: UILabel!
+    @IBOutlet weak var recipeCellRestaurantName: UILabel!
 }

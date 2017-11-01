@@ -7,8 +7,14 @@ target 'discountcooking' do
   # Pods for discountcooking
 
   pod 'Alamofire', '~> 4.5'
-
-
+  
+  pod 'Firebase/Core'
+  pod 'FirebaseAuth'
+  pod 'FirebaseStorage'
+  pod 'SDWebImage'
+  pod 'MBProgressHUD'
+  pod 'SDWebImage'
+  pod 'FirebaseDatabase'
   target 'discountcookingTests' do
     inherit! :search_paths
     # Pods for testing

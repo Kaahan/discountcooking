@@ -9,21 +9,15 @@
 import Foundation
 
 class Restaurant {
-    internal var name: String
-    internal var coupons: [Coupon]
-    internal var recipes: [Recipe]
-    init(name: String, coupons: [Coupon], recipes: [Recipe]) {
+    var name: String
+    var recipes: [Recipe]
+    var restaurantID: String
+    
+    init(id: String, name: String, recipes: [Recipe]) {
+        self.restaurantID = id
         self.name = name
-        self.coupons = coupons
         self.recipes = recipes
     }
-    func getName() -> String {
-        return self.name
-    }
-    func getCoupons() -> [Coupon] {
-        return self.coupons
-    }
-    func getRecipes() -> [Recipe] {
-        return self.recipes
-    }
+    
+    
 }

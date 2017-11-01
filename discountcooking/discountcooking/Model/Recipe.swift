@@ -9,33 +9,27 @@
 import Foundation
 import UIKit
 
+
 class Recipe {
-    internal var name: String
-    internal var prepTime: Int
-    internal var ingredients: [String]
-    internal var directions: [String]
-    internal var restaurant: Restaurant
-    init(name: String, prepTime: Int, ingredients: [String], directions: [String], restaurant: Restaurant) {
-        self.name = name
-        self.prepTime = prepTime
-        self.ingredients = ingredients
-        self.directions = directions
-        self.restaurant = restaurant
+    
+    var name: String = ""
+    var prepTime: Int? = 0
+    var ingredients: [String] = []
+    var directions: [String] = []
+    var restaurantID: String = ""
+    var done: Bool = false
+    var description: String = ""
+    init() {
+        
+    }
+    func dictToRestaurant(dict: [String:Any?], isDone: Bool) {
+        name = dict["name"] as! String
+        prepTime = Int(dict["prepTime"] as! String)
+        ingredients =  dict["ingredients"] as! [String]
+        directions = dict["directions"] as! [String]
+        restaurantID = dict["restaurantID"] as! String
+        description = dict["description"] as! String
+        done = isDone
     }
     
-    func getName() -> String {
-        return self.name
-    }
-    func getPrepTime() -> Int {
-        return self.prepTime
-    }
-    func getIngredients() -> [String] {
-        return self.ingredients
-    }
-    func getDirections() -> [String] {
-        return self.directions
-    }
-    func getRestaurant() -> Restaurant {
-        return self.restaurant
-    }
 }

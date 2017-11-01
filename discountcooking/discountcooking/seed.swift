@@ -7,9 +7,15 @@
 //
 
 import Foundation
-let restaurants: [Restaurant] = [Restaurant(name: "La Burrita", coupons: [], recipes: [])]
-let recipes: [Recipe] = [
-    Recipe(name: "Enchillada", prepTime: 40, ingredients: ["Tortilla", "Memes", "Beans", "Cheese"], directions: ["Put all the ingredients in tortilla", "Bake in oven"], restaurant: restaurants[0])
+import FirebaseDatabase
+import FirebaseStorage
 
-
-]
+func seedDatabase() {
+    let dbRef = Database.database().reference()
+    
+    let dict: [String:Any?] = ["name": "enchillada", "prepTime": "40", "ingredients": ["beans", "cheese", "tortilla", "sauce"], "directions": ["put stuff in tortilla", "cover in sauce", "put in           oven", "eat"],
+                "restaurantID": "1", "description": "delicious mexican dish made easy"]
+    
+    dbRef.child(firRecipesNode).childByAutoId().setValue(dict)
+    
+}

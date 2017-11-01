@@ -12,22 +12,19 @@ class Coupon {
     
     var value: Int
     var percent: Float
-    internal var restaurant: Restaurant
-    internal var recipes: [Recipe]
+    var recipes: [Recipe]
+    var couponID: String
     
-    
-    init(value: Int = 0, percent: Float = 0.0, restaurant: Restaurant, recipes: [Recipe]) {
+    init(id: String, value: Int = 0, percent: Float = 0.0, recipes: [Recipe]) {
         self.value = value
         self.percent = percent
-        self.restaurant = restaurant
         self.recipes = recipes
+        self.couponID = id
     }
-    
-    func getRestaurant() -> Restaurant {
-        return self.restaurant
+    //TODO: QRCode function
+    func generateQR() {
+        
     }
-    func getRecipes() -> [Recipe] {
-        return self.recipes
-    }
+    //TODO: Verify valid
     
 }
