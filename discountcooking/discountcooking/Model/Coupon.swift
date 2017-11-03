@@ -26,5 +26,7 @@ class Coupon {
         
     }
     //TODO: Verify valid
-    
+    func verify() {
+        
+    }
 }

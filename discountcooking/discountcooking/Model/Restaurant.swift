@@ -9,15 +9,22 @@
 import Foundation
 
 class Restaurant {
-    var name: String
-    var recipes: [Recipe]
-    var restaurantID: String
+    var name: String = ""
+    var recipes: [Recipe] = []
+    var restaurantID: String = ""
     
-    init(id: String, name: String, recipes: [Recipe]) {
-        self.restaurantID = id
-        self.name = name
-        self.recipes = recipes
+    init() {
+       
     }
     
+    func dictToRestaurant(id: String, dict: [String:Any?]) {
+        self.name = dict["name"] as! String
+        for recipe in dict["recipes"] as! [String] {
+            getRecipe(id: recipe, completion: {(returnedrecipe) in
+                self.recipes.append(returnedrecipe!)
+            })
+        }
+        self.restaurantID = id
+    }
     
 }

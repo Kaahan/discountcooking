@@ -38,7 +38,7 @@ func getRecipes(user: CurrentUser, completion: @escaping ([Recipe]?) -> Void) {
         }
     })
 }
-func getRestaurantName(id: String, completion: @escaping (String?) -> Void) {
+func getRestaurant(id: String, completion: @escaping (Restaurant?) -> Void) {
     let dbRef = Database.database().reference()
     dbRef.child(firRestaurantsNode).observeSingleEvent(of: .value) { (snapshot) in
         if snapshot.exists() {
@@ -46,15 +46,40 @@ func getRestaurantName(id: String, completion: @escaping (String?) -> Void) {
                 for key in restaurants.keys {
                     if let returnedrestaurant = restaurants[key] as? [String:Any] {
                         if key == id {
-                            completion(returnedrestaurant["name"] as? String)
+                            var restaurant = Restaurant()
+                            restaurant.dictToRestaurant(id: key, dict: returnedrestaurant)
+                            completion(restaurant)
                         }
                     }
                 }
             } else {
-                completion("")
+                completion(nil)
             }
         } else {
-            completion("")
+            completion(nil)
+        }
+    }
+}
+func getRecipe(id: String, completion: @escaping (Recipe?) -> Void) {
+    let dbRef = Database.database().reference()
+    dbRef.child(firRecipesNode).observeSingleEvent(of: .value) { (snapshot) in
+        if snapshot.exists() {
+            if let recipes = snapshot.value as? [String:AnyObject] {
+                for key in recipes.keys {
+                    if let returnedrecipe = recipes[key] as? [String:Any] {
+                        if key == id {
+                            var recipe = Recipe()
+                            recipe.dictToRestaurant(dict: returnedrecipe, isDone: false)
+                            completion(recipe)
+                        }
+                    }
+                    
+                }
+            } else {
+                completion(nil)
+            }
+        } else {
+            completion(nil)
         }
     }
 }

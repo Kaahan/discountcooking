@@ -21,6 +21,7 @@ class RecipeController: UIViewController, UITableViewDelegate, UITableViewDataSo
         super.viewDidLoad()
         recipeTable.dataSource = self
         recipeTable.delegate = self
+        seedDatabase()
     }
     override func viewWillAppear(_ animated: Bool) {
         recipeTable.reloadData()
@@ -52,8 +53,8 @@ class RecipeController: UIViewController, UITableViewDelegate, UITableViewDataSo
         let recipe = recipeArray[indexPath.row]
         cell.recipeCellName.text = recipe.name
         cell.recipeShortDescription.text = recipe.description
-        getRestaurantName(id: recipe.restaurantID) { (name) in
-            cell.recipeCellRestaurantName.text = name
+        getRestaurant(id: recipe.restaurantID) { (restaurant) in
+            cell.recipeCellRestaurantName.text = restaurant!.name
         }
         return cell
     }

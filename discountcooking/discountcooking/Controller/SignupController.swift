@@ -70,7 +70,7 @@ class SignupController: UIViewController, UITextFieldDelegate {
                     
                 }
                 let uid: String = (Auth.auth().currentUser?.uid)!
-                let dict: [String:Any?] = ["uid": uid, "coupons": ["empty"], "recipes": ["empty"]]
+                let dict: [String:Any?] = ["uid": uid, "coupons": [nil], "recipes": [nil], "role": "customer"]
                 self.dbRef.child("Users").childByAutoId().setValue(dict)
                 
             }

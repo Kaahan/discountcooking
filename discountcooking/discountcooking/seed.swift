@@ -13,9 +13,15 @@ import FirebaseStorage
 func seedDatabase() {
     let dbRef = Database.database().reference()
     
-    let dict: [String:Any?] = ["name": "enchillada", "prepTime": "40", "ingredients": ["beans", "cheese", "tortilla", "sauce"], "directions": ["put stuff in tortilla", "cover in sauce", "put in           oven", "eat"],
-                "restaurantID": "1", "description": "delicious mexican dish made easy"]
+    let restaurantdict: [String:Any] = ["name": "La Burrita", "coupons": ["empty"], "recipes": ["empty"]]
+    dbRef.child(firRestaurantsNode).childByAutoId().setValue(restaurantdict)
     
-    dbRef.child(firRecipesNode).childByAutoId().setValue(dict)
+    
+    
+    let recipedict: [String:Any?] = ["name": "enchillada", "prepTime": "40", "ingredients": ["beans", "cheese", "tortilla", "sauce"], "directions": ["put stuff in tortilla", "cover in sauce", "put in oven", "eat"],
+                "restaurantID": "1", "description": "delicious mexican dish made easy"]
+
+    dbRef.child(firRecipesNode).childByAutoId().setValue(recipedict)
+    
     
 }
