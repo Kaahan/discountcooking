@@ -24,6 +24,9 @@ class LoginController: UIViewController, UITextFieldDelegate {
 
     }
     
+    @IBAction func goBack(_ sender: Any) {
+        performSegue(withIdentifier: "unwindToInitialFromLogin", sender: self)
+    }
     override func viewWillAppear(_ animated: Bool) {
         handle = Auth.auth().addStateDidChangeListener { (auth, user) in
             // ...

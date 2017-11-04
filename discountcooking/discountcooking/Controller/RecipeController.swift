@@ -21,7 +21,6 @@ class RecipeController: UIViewController, UITableViewDelegate, UITableViewDataSo
         super.viewDidLoad()
         recipeTable.dataSource = self
         recipeTable.delegate = self
-        seedDatabase()
     }
     override func viewWillAppear(_ animated: Bool) {
         recipeTable.reloadData()
@@ -59,7 +58,13 @@ class RecipeController: UIViewController, UITableViewDelegate, UITableViewDataSo
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("clicked")
+        performSegue(withIdentifier: "toIndividualRecipe", sender: recipeArray[indexPath.row])
     }
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let dest = segue.destination as? IndividualRecipeController {
+            if let recipe = sender as? Recipe {
+                dest.recipe = recipe
+            }
+        }
+    }
 }

@@ -41,4 +41,7 @@ class InitialController: UIViewController {
         performSegue(withIdentifier: "toSignup", sender: nil)
     }
     
+    @IBAction func unwindToInitial(segue: UIStoryboardSegue) {
+        
+    }
 }
