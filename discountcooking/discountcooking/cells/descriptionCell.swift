@@ -15,15 +15,12 @@ class descriptionCell: UITableViewCell {
     @IBOutlet weak var descriptionName: UILabel!
     @IBOutlet weak var descriptionDescription: UILabel!
     @IBOutlet weak var descriptionTime: UILabel!
-    var item: RecipeViewModelItem? {
+    
+    var item: [String]? {
         didSet {
-            guard let item = item as? RecipeViewModelDescription else {
-                return
-            }
-            
-            descriptionName.text = item.name
-            descriptionTime.text = String(item.prepTime)
-            descriptionDescription.text = item.description
+            descriptionName.text = item![0]
+            descriptionTime.text = item![1]
+            descriptionDescription.text = item![2]
             
         }
     }

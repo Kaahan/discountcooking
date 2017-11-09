@@ -12,14 +12,12 @@ import UIKit
 class directionCell: UITableViewCell {
     
     
-    @IBOutlet weak var number: UILabel!
     
     @IBOutlet weak var direction: UILabel!
     
     var item: [String]? {
         didSet {
-            number.text = item![0]
-            direction.text = item![1]
+            direction.text = "\(item![0]). \(item![1])"
         }
     }
     static var nib:UINib {

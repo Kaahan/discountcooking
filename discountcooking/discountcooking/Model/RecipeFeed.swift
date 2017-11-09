@@ -9,7 +9,7 @@
 import Foundation
 import FirebaseStorage
 import FirebaseDatabase
-
+import UIKit
 
 
 
@@ -23,7 +23,7 @@ func getRecipes(user: CurrentUser, completion: @escaping ([Recipe]?) -> Void) {
                     for key in recipes.keys {
                         if let recipe = recipes[key] as? [String:Any] {
                             var newRecipe = Recipe()
-                            newRecipe.dictToRestaurant(dict: recipe, isDone: doneRecipes.contains(key))
+                            newRecipe.dictToRecipe(dict: recipe, isDone: doneRecipes.contains(key))
                             recipesArray.append(newRecipe)
                             
                         }
@@ -69,7 +69,7 @@ func getRecipe(id: String, completion: @escaping (Recipe?) -> Void) {
                     if let returnedrecipe = recipes[key] as? [String:Any] {
                         if key == id {
                             var recipe = Recipe()
-                            recipe.dictToRestaurant(dict: returnedrecipe, isDone: false)
+                            recipe.dictToRecipe(dict: returnedrecipe, isDone: false)
                             completion(recipe)
                         }
                     }
@@ -80,6 +80,39 @@ func getRecipe(id: String, completion: @escaping (Recipe?) -> Void) {
             }
         } else {
             completion(nil)
+        }
+    }
+}
+func createRecipe(recipe: Recipe, image: UIImage) {
+    let dbRef = Database.database().reference()
+    let uuid = NSUUID().uuidString
+    recipe.imagePath = firStorageImagesPath + "/" + uuid
+    dbRef.child(firRecipesNode).childByAutoId().setValue(recipe.recipeToDict(recipe: recipe))
+    store(data: UIImagePNGRepresentation(image), toPath: (firStorageImagesPath + "/" + uuid))
+}
+func getDataFromPath(path: String, completion: @escaping (Data?) -> Void) {
+    let storageRef = Storage.storage().reference()
+    if let cachedImage = imageCache.object(forKey: path as NSString) {
+        completion(UIImagePNGRepresentation(cachedImage))
+    }
+    storageRef.child(path).getData(maxSize: 6 * 1024 * 1024) { (data, error) in
+        if let error = error {
+            print(error)
+        }
+        if let data = data {
+            let image = UIImage(data: data)
+            imageCache.setObject(image!, forKey: path as NSString)
+            completion(data)
+        } else {
+            completion(nil)
+        }
+    }
+}
+func store(data: Data?, toPath path: String) {
+    let storageRef = Storage.storage().reference()
+    storageRef.child(path).putData(data!, metadata: nil) { (metadata, error) in
+        if let error = error {
+            print(error)
         }
     }
 }

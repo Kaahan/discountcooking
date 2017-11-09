@@ -27,3 +27,6 @@ var firDoneRecipesNode = "doneRecipes"
 var firCouponsNode = "Coupons"
 var firUserCouponsNode = "Coupons"
 var firRestaurantsNode = "Restaurants"
+var firStorageImagesPath = "Images"
+
+let imageCache = NSCache<NSString, UIImage>()

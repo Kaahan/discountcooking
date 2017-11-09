@@ -9,19 +9,37 @@
 import Foundation
 import FirebaseDatabase
 import FirebaseStorage
-
+import UIKit
 func seedDatabase() {
     let dbRef = Database.database().reference()
-    
-    let restaurantdict: [String:Any] = ["name": "La Burrita", "coupons": ["empty"], "recipes": ["empty"]]
-    dbRef.child(firRestaurantsNode).childByAutoId().setValue(restaurantdict)
-    
-    
-    
-    let recipedict: [String:Any?] = ["name": "enchillada", "prepTime": "40", "ingredients": ["beans", "cheese", "tortilla", "sauce"], "directions": ["put stuff in tortilla", "cover in sauce", "put in oven", "eat"],
+//
+//    let restaurantdict: [String:Any] = ["name": "La Burrita", "coupons": ["empty"], "recipes": ["empty"]]
+//    dbRef.child(firRestaurantsNode).childByAutoId().setValue(restaurantdict)
+//
+//
+//    
+    let recipedict: [String:Any?] = ["name": "enchillada", "prepTime": "40", "ingredients": ["beans", "cheese", "tortilla", "sauce"], "directions": ["put stuff in tortillaasaasdpiasnduinailudnaiundwiunaliusndwjawiudnlaksjndwualnkwjndkajsnjkwnauinlkjsndiuwakljsnduwaliknjsdwuailknsjdnwauiskjndlwajkn", "cover in sauce", "put in oven", "eat"],
                 "restaurantID": "1", "description": "delicious mexican dish made easy"]
-
-    dbRef.child(firRecipesNode).childByAutoId().setValue(recipedict)
-    
+    let recipedict2: [String:Any?] = ["name": "Crock Pot Roast",
+                                      "prepTime": "480",
+                                      "ingredients": [
+                                        "beef roast",
+                                        "brown gravy mix",
+                                        "dried Italian salad dressing mix",
+                                        "dry ranch dressing mix",
+                                        "water"],
+                                      "directions": [
+                                        "Place beef roast in crock pot.",
+                                        "Mix the dried mixes together in a bowl and sprinkle over the roast.",
+                                        "Pour the water around the roast.",
+                                        "Cook on low for 7-9 hours."],
+                                      "restaurantID": "1",
+                                      "description": "Delicious traditional american recipe",]
+    let recipe = Recipe()
+    recipe.dictToRecipe(dict: recipedict2, isDone: false)
+    let url = URL(string:"https://www.laurengreutman.com/wp-content/uploads/2015/08/Pot-Roast-in-crockpot.png")
+    let data = try? Data(contentsOf: url!)
+    let image: UIImage = UIImage(data: data!)!
+    createRecipe(recipe: recipe, image: image)
     
 }

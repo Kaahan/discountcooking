@@ -22,11 +22,13 @@ class IndividualRecipeController: UIViewController {
         individualTableView.dataSource = recipeViewModel
         
         individualTableView.estimatedRowHeight = 100
+        individualTableView.rowHeight = UITableViewAutomaticDimension
         
+        individualTableView.register(imageCell.nib, forCellReuseIdentifier: imageCell.identifier)
         individualTableView.register(descriptionCell.nib, forCellReuseIdentifier: descriptionCell.identifier)
         individualTableView.register(ingredientsCell.nib, forCellReuseIdentifier: ingredientsCell.identifier)
         individualTableView.register(directionCell.nib, forCellReuseIdentifier: directionCell.identifier)
-        individualTableView.isUserInteractionEnabled = false
+        
         
     }
     override func viewWillAppear(_ animated: Bool) {

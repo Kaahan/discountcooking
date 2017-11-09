@@ -49,12 +49,14 @@ class RecipeViewModelImageItem: RecipeViewModelItem {
 
 class RecipeViewModelDescription: RecipeViewModelItem {
     var sectionTitle: String {
-        return "Information"
+        return ""
     }
     var type: RecipeViewModelItemType {
         return .description
     }
-    
+    var rowCount: Int {
+        return 1
+    }
     var name: String
     var prepTime: Int
     var description: String
@@ -110,12 +112,15 @@ class RecipeViewModel: NSObject {
         
     }
     func updateModel(recipe: Recipe) {
-        let description = RecipeViewModelDescription(name: recipe.name, prepTime: recipe.prepTime!, description: recipe.description)
+        let image = RecipeViewModelImageItem(pictureUrl: recipe.imagePath)
+        items.append(image)
+        let description = RecipeViewModelDescription(name: recipe.name, prepTime: recipe.prepTime, description: recipe.description)
         items.append(description)
         let ingredients = RecipeViewModelIngredients(ingredients: recipe.ingredients)
         items.append(ingredients)
         let directions = RecipeViewModelDirections(directions: recipe.directions)
         items.append(directions)
+        
     }
     func clearModel() {
         items = []
@@ -128,24 +133,32 @@ extension RecipeViewModel: UITableViewDataSource {
         let item = items[indexPath.section]
         switch item.type {
         case .description:
-            if let cell = tableView.dequeueReusableCell(withIdentifier: descriptionCell.identifier, for: indexPath) as? descriptionCell{
-                cell.item = item
+            if let item = item as? RecipeViewModelDescription, let cell = tableView.dequeueReusableCell(withIdentifier: descriptionCell.identifier, for: indexPath) as? descriptionCell{
+                cell.item = [item.name, "\(item.prepTime)", item.description]
+                cell.isUserInteractionEnabled = false
                 return cell
             }
         case .directions:
             
             if let item = item as? RecipeViewModelDirections, let cell = tableView.dequeueReusableCell(withIdentifier: directionCell.identifier, for: indexPath) as? directionCell {
                 cell.item = [String(indexPath.row + 1), item.directions[indexPath.row]]
+                cell.isUserInteractionEnabled = false
                 return cell
             }
         case .ingredients:
             
             if let item = item as? RecipeViewModelIngredients, let cell = tableView.dequeueReusableCell(withIdentifier: ingredientsCell.identifier, for: indexPath) as? ingredientsCell {
                 cell.item = item.ingredients[indexPath.row]
+                cell.isUserInteractionEnabled = false
+                cell.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: .greatestFiniteMagnitude)
                 return cell
             }
         case .image:
-            print("wat")
+            if let item = item as? RecipeViewModelImageItem, let cell = tableView.dequeueReusableCell(withIdentifier: imageCell.identifier, for: indexPath) as? imageCell {
+                cell.item = item.pictureUrl
+                cell.isUserInteractionEnabled = false
+                return cell
+            }
         case .upload:
             print("wat")
         }

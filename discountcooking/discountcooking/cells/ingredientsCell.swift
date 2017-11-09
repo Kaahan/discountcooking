@@ -16,7 +16,7 @@ class ingredientsCell: UITableViewCell {
     
     var item: String? {
         didSet{
-            ingredientIngredient.text = item!
+            ingredientIngredient.text = "• \(item!)"
         }
     }
     

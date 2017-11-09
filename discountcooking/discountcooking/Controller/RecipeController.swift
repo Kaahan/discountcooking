@@ -25,7 +25,6 @@ class RecipeController: UIViewController, UITableViewDelegate, UITableViewDataSo
     override func viewWillAppear(_ animated: Bool) {
         recipeTable.reloadData()
         self.updateData()
-        
     }
     func updateData() {
         getRecipes(user: currentUser) { (recipes) in
@@ -54,6 +53,11 @@ class RecipeController: UIViewController, UITableViewDelegate, UITableViewDataSo
         cell.recipeShortDescription.text = recipe.description
         getRestaurant(id: recipe.restaurantID) { (restaurant) in
             cell.recipeCellRestaurantName.text = restaurant!.name
+        }
+        getDataFromPath(path: recipe.imagePath) { (data) in
+            if let data = data {
+                cell.imageView!.image = UIImage(data: data)
+            }
         }
         return cell
     }
