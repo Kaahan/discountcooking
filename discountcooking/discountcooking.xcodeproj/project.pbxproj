@@ -37,13 +37,15 @@
 		D575D3DF1F9FAB35006EE35A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D575D3DE1F9FAB35006EE35A /* GoogleService-Info.plist */; };
 		D575D3E21FA18798006EE35A /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D575D3E11FA18798006EE35A /* ProfileController.swift */; };
 		D575D3E61FA1891E006EE35A /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D575D3E51FA1891E006EE35A /* CurrentUser.swift */; };
-		D575D3E81FA18971006EE35A /* RecipeFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = D575D3E71FA18971006EE35A /* RecipeFeed.swift */; };
+		D575D3E81FA18971006EE35A /* helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D575D3E71FA18971006EE35A /* helper.swift */; };
 		D57EC8631FAE44680056976E /* descriptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D57EC8621FAE44680056976E /* descriptionCell.xib */; };
 		D57EC8671FAE45190056976E /* descriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57EC8661FAE45190056976E /* descriptionCell.swift */; };
 		D5956A5E1F972ABA0088BB47 /* recipeControllerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5956A5D1F972ABA0088BB47 /* recipeControllerCell.swift */; };
 		D5956A601F972C190088BB47 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5956A5F1F972C190088BB47 /* Restaurant.swift */; };
 		D5956A621F972C450088BB47 /* Coupon.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5956A611F972C450088BB47 /* Coupon.swift */; };
 		D5956A641F981B830088BB47 /* seed.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5956A631F981B830088BB47 /* seed.swift */; };
+		D5B882F61FB7A3FD008A369B /* uploadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B882F51FB7A3FD008A369B /* uploadCell.swift */; };
+		D5B882F81FB7A4BF008A369B /* uploadCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5B882F71FB7A4BF008A369B /* uploadCell.xib */; };
 		DC4FB782315734CA528DB74C /* Pods_discountcookingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 399315F96EA5B74B3F3C618D /* Pods_discountcookingTests.framework */; };
 		E5A203801B3E8E1624FFC326 /* Pods_discountcookingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C0F6A3EC6DF41141874C226 /* Pods_discountcookingUITests.framework */; };
 /* End PBXBuildFile section */
@@ -135,13 +137,15 @@
 		D575D3DE1F9FAB35006EE35A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D575D3E11FA18798006EE35A /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		D575D3E51FA1891E006EE35A /* CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
-		D575D3E71FA18971006EE35A /* RecipeFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeFeed.swift; sourceTree = "<group>"; };
+		D575D3E71FA18971006EE35A /* helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = helper.swift; sourceTree = "<group>"; };
 		D57EC8621FAE44680056976E /* descriptionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = descriptionCell.xib; sourceTree = "<group>"; };
 		D57EC8661FAE45190056976E /* descriptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = descriptionCell.swift; sourceTree = "<group>"; };
 		D5956A5D1F972ABA0088BB47 /* recipeControllerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recipeControllerCell.swift; sourceTree = "<group>"; };
 		D5956A5F1F972C190088BB47 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		D5956A611F972C450088BB47 /* Coupon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coupon.swift; sourceTree = "<group>"; };
 		D5956A631F981B830088BB47 /* seed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = seed.swift; sourceTree = "<group>"; };
+		D5B882F51FB7A3FD008A369B /* uploadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = uploadCell.swift; sourceTree = "<group>"; };
+		D5B882F71FB7A4BF008A369B /* uploadCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = uploadCell.xib; sourceTree = "<group>"; };
 		E8C63A7A0308879D97E5B11D /* Pods-discountcookingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-discountcookingTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-discountcookingTests/Pods-discountcookingTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -312,7 +316,7 @@
 				D5956A5F1F972C190088BB47 /* Restaurant.swift */,
 				D5956A611F972C450088BB47 /* Coupon.swift */,
 				D575D3E51FA1891E006EE35A /* CurrentUser.swift */,
-				D575D3E71FA18971006EE35A /* RecipeFeed.swift */,
+				D575D3E71FA18971006EE35A /* helper.swift */,
 				D51BF1BF1FAD1E8900F2A595 /* IndividualViewModel.swift */,
 			);
 			path = Model;
@@ -343,6 +347,8 @@
 				D5285C011FAE4C25004C3BC7 /* directionCell.xib */,
 				D519C8A71FB3CEC50036E40D /* imageCell.swift */,
 				D519C8AB1FB3CEE40036E40D /* imageCell.xib */,
+				D5B882F51FB7A3FD008A369B /* uploadCell.swift */,
+				D5B882F71FB7A4BF008A369B /* uploadCell.xib */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -490,6 +496,7 @@
 				D55B536B1F940DC300C13C47 /* LaunchScreen.storyboard in Resources */,
 				D5285C021FAE4C25004C3BC7 /* directionCell.xib in Resources */,
 				D51E119F1F949A8C00962876 /* gravity in Resources */,
+				D5B882F81FB7A4BF008A369B /* uploadCell.xib in Resources */,
 				D55B53681F940DC300C13C47 /* Assets.xcassets in Resources */,
 				D57EC8631FAE44680056976E /* descriptionCell.xib in Resources */,
 				D55B53661F940DC300C13C47 /* Main.storyboard in Resources */,
@@ -690,6 +697,7 @@
 				D519C8A81FB3CEC50036E40D /* imageCell.swift in Sources */,
 				D51E11A51F94A2B600962876 /* LoginController.swift in Sources */,
 				D5956A641F981B830088BB47 /* seed.swift in Sources */,
+				D5B882F61FB7A3FD008A369B /* uploadCell.swift in Sources */,
 				D51BF1C01FAD1E8900F2A595 /* IndividualViewModel.swift in Sources */,
 				D54FEEF01F94AA9300E404C7 /* KaedeTextField.swift in Sources */,
 				D54FEECD1F94A31400E404C7 /* SignupController.swift in Sources */,
@@ -701,7 +709,7 @@
 				D550785C1F9492E300375C5B /* extensions.swift in Sources */,
 				D54FEEF11F94AAAA00E404C7 /* TextFieldEffects.swift in Sources */,
 				D56C94351F958F220056BCCE /* RecipeController.swift in Sources */,
-				D575D3E81FA18971006EE35A /* RecipeFeed.swift in Sources */,
+				D575D3E81FA18971006EE35A /* helper.swift in Sources */,
 				D56C94311F958EF00056BCCE /* Recipe.swift in Sources */,
 				D5285C001FAE4C1B004C3BC7 /* directionCell.swift in Sources */,
 				D5956A621F972C450088BB47 /* Coupon.swift in Sources */,
@@ -808,7 +816,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -859,7 +867,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -873,6 +881,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3BWCBMP5K2;
 				INFOPLIST_FILE = discountcooking/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kaahan.discountcooking;
@@ -888,6 +897,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3BWCBMP5K2;
 				INFOPLIST_FILE = discountcooking/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kaahan.discountcooking;

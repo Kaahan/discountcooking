@@ -19,7 +19,8 @@ class descriptionCell: UITableViewCell {
     var item: [String]? {
         didSet {
             descriptionName.text = item![0]
-            descriptionTime.text = item![1]
+            var inttime = Int(item![1])
+            descriptionTime.text = "⏱ \(stringPrepTime(prepTime: inttime!))"
             descriptionDescription.text = item![2]
             
         }

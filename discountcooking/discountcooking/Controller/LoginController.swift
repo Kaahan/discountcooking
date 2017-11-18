@@ -21,7 +21,9 @@ class LoginController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         self.emailTextField.delegate = self
         self.passwordTextField.delegate = self
-
+        let tap = UITapGestureRecognizer(target: self.view, action: Selector("endEditing:"))
+        tap.cancelsTouchesInView = false
+        self.view.addGestureRecognizer(tap)
     }
     
     @IBAction func goBack(_ sender: Any) {

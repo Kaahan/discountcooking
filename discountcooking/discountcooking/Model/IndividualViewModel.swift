@@ -103,9 +103,21 @@ class RecipeViewModelDirections: RecipeViewModelItem {
         self.directions = directions
     }
 }
-
+class RecipeViewModelUpload: RecipeViewModelItem {
+    var sectionTitle: String {
+        return ""
+    }
+    var type: RecipeViewModelItemType {
+        return .upload
+    }
+    init() {
+        
+    }
+}
 class RecipeViewModel: NSObject {
+    
     var items = [RecipeViewModelItem]()
+    var buttonWasTapped = false
     
     override init() {
         super.init()
@@ -120,7 +132,8 @@ class RecipeViewModel: NSObject {
         items.append(ingredients)
         let directions = RecipeViewModelDirections(directions: recipe.directions)
         items.append(directions)
-        
+        let upload = RecipeViewModelUpload()
+        items.append(upload)
     }
     func clearModel() {
         items = []
@@ -128,6 +141,12 @@ class RecipeViewModel: NSObject {
 }
 
 extension RecipeViewModel: UITableViewDataSource {
+    
+    @objc func buttonTapped(_ sender:UIButton!){
+        buttonWasTapped = true
+    }
+    
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let item = items[indexPath.section]
@@ -160,7 +179,12 @@ extension RecipeViewModel: UITableViewDataSource {
                 return cell
             }
         case .upload:
-            print("wat")
+            if let cell = tableView.dequeueReusableCell(withIdentifier: uploadCell.identifier, for: indexPath) as? uploadCell {
+                cell.uploadButton.tag = indexPath.row
+                cell.uploadButton.addTarget(self, action: #selector(RecipeViewModel.buttonTapped), for: UIControlEvents.touchUpInside)
+                return cell
+            }
+            
         }
         return UITableViewCell()
     }
@@ -175,3 +199,5 @@ extension RecipeViewModel: UITableViewDataSource {
         return items[section].sectionTitle
     }
 }
+
+

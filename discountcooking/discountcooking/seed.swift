@@ -34,9 +34,10 @@ func seedDatabase() {
                                         "Pour the water around the roast.",
                                         "Cook on low for 7-9 hours."],
                                       "restaurantID": "1",
-                                      "description": "Delicious traditional american recipe",]
+                                      "description": "Delicious traditional american recipe",
+                                      "isDone": false]
     let recipe = Recipe()
-    recipe.dictToRecipe(dict: recipedict2, isDone: false)
+    recipe.dictToRecipe(dict: recipedict2, key: "")
     let url = URL(string:"https://www.laurengreutman.com/wp-content/uploads/2015/08/Pot-Roast-in-crockpot.png")
     let data = try? Data(contentsOf: url!)
     let image: UIImage = UIImage(data: data!)!

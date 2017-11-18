@@ -22,7 +22,7 @@ class Coupon {
         self.couponID = id
     }
     //TODO: QRCode function
-    func generateQR() {
+    func generateQR(user: CurrentUser) {
         
     }
     //TODO: Verify valid

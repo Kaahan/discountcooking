@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="aq3-8l-Kdo" customClass="uploadCell" customModule="discountcooking" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aq3-8l-Kdo" id="bwe-xF-c5h">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TR9-m9-TBA">
+                        <rect key="frame" x="162" y="6" width="50" height="30"/>
+                        <state key="normal" title="Upload"/>
+                        <connections>
+                            <action selector="uploadTapped:" destination="aq3-8l-Kdo" eventType="touchUpInside" id="YmM-Rf-gFc"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="TR9-m9-TBA" firstAttribute="centerY" secondItem="bwe-xF-c5h" secondAttribute="centerY" id="IDu-W6-aiu"/>
+                    <constraint firstItem="TR9-m9-TBA" firstAttribute="centerX" secondItem="bwe-xF-c5h" secondAttribute="centerX" id="OrE-MR-Xvj"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="uploadButton" destination="TR9-m9-TBA" id="633-d8-Trn"/>
+            </connections>
+            <point key="canvasLocation" x="61" y="30"/>
+        </tableViewCell>
+    </objects>
+</document>

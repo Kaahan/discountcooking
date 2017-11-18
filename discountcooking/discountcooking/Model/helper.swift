@@ -13,28 +13,33 @@ import UIKit
 
 
 
-func getRecipes(user: CurrentUser, completion: @escaping ([Recipe]?) -> Void) {
+func getRecipes(key: String = "", user: CurrentUser, completion: @escaping ([Recipe]?, String) -> Void) {
     let dbRef = Database.database().reference()
     var recipesArray: [Recipe] = []
     dbRef.child(firRecipesNode).observeSingleEvent(of: .value, with: { snapshot -> Void in
         if snapshot.exists() {
             if let recipes = snapshot.value as? [String:AnyObject] {
+                
                 user.getDoneRecipes(completion: { (doneRecipes) in
                     for key in recipes.keys {
-                        if let recipe = recipes[key] as? [String:Any] {
-                            var newRecipe = Recipe()
-                            newRecipe.dictToRecipe(dict: recipe, isDone: doneRecipes.contains(key))
-                            recipesArray.append(newRecipe)
-                            
+                        if doneRecipes[key] != nil {
+                            continue
+                        } else {
+                            if let recipe = recipes[key] as? [String:Any] {
+                                var newRecipe = Recipe()
+                                newRecipe.dictToRecipe(dict: recipe, key: key)
+                                recipesArray.append(newRecipe)
+                                
+                            }
                         }
                     }
-                    completion(recipesArray)
+                    completion(recipesArray, key)
                 })
             } else {
-                completion(nil)
+                completion(nil, key)
             }
         } else {
-            completion(nil)
+            completion(nil, key)
         }
     })
 }
@@ -69,7 +74,7 @@ func getRecipe(id: String, completion: @escaping (Recipe?) -> Void) {
                     if let returnedrecipe = recipes[key] as? [String:Any] {
                         if key == id {
                             var recipe = Recipe()
-                            recipe.dictToRecipe(dict: returnedrecipe, isDone: false)
+                            recipe.dictToRecipe(dict: returnedrecipe, key: key)
                             completion(recipe)
                         }
                     }
@@ -93,7 +98,7 @@ func createRecipe(recipe: Recipe, image: UIImage) {
 func getDataFromPath(path: String, completion: @escaping (Data?) -> Void) {
     let storageRef = Storage.storage().reference()
     if let cachedImage = imageCache.object(forKey: path as NSString) {
-        completion(UIImagePNGRepresentation(cachedImage))
+        completion(UIImageJPEGRepresentation(cachedImage, 1))
     }
     storageRef.child(path).getData(maxSize: 6 * 1024 * 1024) { (data, error) in
         if let error = error {
@@ -108,6 +113,15 @@ func getDataFromPath(path: String, completion: @escaping (Data?) -> Void) {
         }
     }
 }
+func stringPrepTime(prepTime: Int) -> String {
+    if prepTime%60 == 0 {
+        return "\(Int(prepTime/60)) hours"
+    } else if prepTime > 60 {
+        return "\(Int(prepTime/60)):\(prepTime%60)"
+    } else {
+        return "\(prepTime)"
+    }
+}
 func store(data: Data?, toPath path: String) {
     let storageRef = Storage.storage().reference()
     storageRef.child(path).putData(data!, metadata: nil) { (metadata, error) in
@@ -116,4 +130,24 @@ func store(data: Data?, toPath path: String) {
         }
     }
 }
-
+func getUserByID(id: String, completion: @escaping (String) -> Void) {
+    let dbRef = Database.database().reference()
+    dbRef.child(firUsersNode).observe(.value, with: { (snapshot) in
+        if snapshot.exists() {
+            if let users = snapshot.value as? [String:AnyObject?] {
+                for key in users.keys {
+                    if let user = users[key] as? [String:Any] {
+                        if user["uid"] as! String == id {
+                            completion(key)
+                        } else {
+                            completion("")
+                        }
+                    }
+                }
+            }
+            
+        } else {
+            completion("")
+        }
+    })
+}

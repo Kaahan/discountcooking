@@ -28,6 +28,9 @@ class SignupController: UIViewController, UITextFieldDelegate {
         self.signupName.delegate = self
         self.signupPass.delegate = self
         self.signupEmail.delegate = self
+        let tap = UITapGestureRecognizer(target: self.view, action: Selector("endEditing:"))
+        tap.cancelsTouchesInView = false
+        self.view.addGestureRecognizer(tap)
     }
     @IBAction func signupWasPressed(_ sender: Any) {
         guard let email = signupEmail.text else { return }
@@ -69,9 +72,10 @@ class SignupController: UIViewController, UITextFieldDelegate {
                     self.present(alertController, animated: true, completion: nil)
                     
                 }
-                let uid: String = (Auth.auth().currentUser?.uid)!
-                let dict: [String:Any?] = ["uid": uid, "coupons": [nil], "recipes": [nil], "role": "customer"]
-                self.dbRef.child("Users").childByAutoId().setValue(dict)
+                let user = Auth.auth().currentUser
+                let uid: String = (user!.uid)
+                let dict: [String:Any?] = ["uid": uid, "coupons": ["empty"], "doneRecipes": ["empty":"empty"], "role": "customer"]
+                self.dbRef.child("Users").child(uid).setValue(dict)
                 
             }
         

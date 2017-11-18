@@ -26,25 +26,41 @@ class CurrentUser {
     }
     
     //Get ID's of done recipes in a string array
-    func getDoneRecipes(completion: @escaping ([String]) -> Void) {
-        var doneRecipes: [String] = []
-        dbRef.child(firUsersNode).child(firDoneRecipesNode).observeSingleEvent(of: .value, with: {(snapshot) in
+    func getDoneRecipes(completion: @escaping ([String:String]) -> Void) {
+        //var doneRecipes: [String] = []
+//            getUserByID(id: self.id) { (key) in
+//                self.dbRef.child(firUsersNode).child(key).child(firDoneRecipesNode).observeSingleEvent(of: .value, with: { (snapshot) in
+//                    if snapshot.exists() {
+//                        if let returnedDoneRecipes = snapshot.value as? [String:String] {
+//                            completion(returnedDoneRecipes)
+//                        } else {
+//                            completion(["":""])
+//                        }
+//                    } else {
+//                        completion(["":""])
+//                    }
+//                })
+//            }
+        self.dbRef.child(firUsersNode).child(id).child(firDoneRecipesNode).observeSingleEvent(of: .value, with: { (snapshot) in
             if snapshot.exists() {
-                let values = snapshot.value as! [String:AnyObject]
-                for key in values.keys {
-                    doneRecipes.append(values[key] as! String)
+                if let returnedDoneRecipes = snapshot.value as? [String:String] {
+                    completion(returnedDoneRecipes)
+                } else {
+                    completion(["":""])
                 }
-                completion(doneRecipes)
             } else {
-                completion([""])
+                completion(["":""])
             }
         })
-    }
+}
+        
+        
+
     
     func getCoupons(completion: @escaping ([String]) -> Void) {
         var userCoupons: [String] = []
         
-        dbRef.child(firUsersNode).child(firUserCouponsNode).observeSingleEvent(of: .value, with: { (snapshot) in
+        dbRef.child(firUsersNode).child(id).child(firUserCouponsNode).observeSingleEvent(of: .value, with: { (snapshot) in
             if snapshot.exists() {
                 let values = snapshot.value as! [String:AnyObject]
                 for key in values.keys {
