@@ -88,12 +88,22 @@ func getRecipe(id: String, completion: @escaping (Recipe?) -> Void) {
         }
     }
 }
-func createRecipe(recipe: Recipe, image: UIImage) {
+func createRecipe(recipe: Recipe, image: UIImage, coupon: Coupon, restaurantID: String) {
     let dbRef = Database.database().reference()
     let uuid = NSUUID().uuidString
     recipe.imagePath = firStorageImagesPath + "/" + uuid
-    dbRef.child(firRecipesNode).childByAutoId().setValue(recipe.recipeToDict(recipe: recipe))
-    store(data: UIImagePNGRepresentation(image), toPath: (firStorageImagesPath + "/" + uuid))
+    let ref = dbRef.child(firRecipesNode).childByAutoId()
+    ref.setValue(recipe.recipeToDict(recipe: recipe))
+    var new_coupon_recipes = coupon.recipes
+    new_coupon_recipes.append(ref.key)
+    dbRef.child(firCouponsNode).child(coupon.couponID).updateChildValues(["recipes": new_coupon_recipes])
+    var restaurant_recipes: [String] = []
+    getRestaurant(id: restaurantID) { (restaurant) in
+        restaurant_recipes = (restaurant?.recipes)!
+        restaurant_recipes.append(ref.key)
+        dbRef.child(firRestaurantsNode).child(restaurantID).updateChildValues(["recipes": restaurant_recipes])
+    }
+    store(data: UIImageJPEGRepresentation(image, 0.5), toPath: (firStorageImagesPath + "/" + uuid))
 }
 func getDataFromPath(path: String, completion: @escaping (Data?) -> Void) {
     let storageRef = Storage.storage().reference()
@@ -130,24 +140,55 @@ func store(data: Data?, toPath path: String) {
         }
     }
 }
-func getUserByID(id: String, completion: @escaping (String) -> Void) {
+func getCoupons(completion: @escaping ([Coupon]?) -> Void) {
     let dbRef = Database.database().reference()
-    dbRef.child(firUsersNode).observe(.value, with: { (snapshot) in
+    var couponArray: [Coupon] = []
+    dbRef.child(firCouponsNode).observeSingleEvent(of: .value) { (snapshot) in
         if snapshot.exists() {
-            if let users = snapshot.value as? [String:AnyObject?] {
-                for key in users.keys {
-                    if let user = users[key] as? [String:Any] {
-                        if user["uid"] as! String == id {
-                            completion(key)
-                        } else {
-                            completion("")
-                        }
+            if let coupons = snapshot.value as? [String:AnyObject] {
+                for key in coupons.keys {
+                    if let coupon = coupons[key] as? [String:Any?]{
+                        var newCoupon = Coupon()
+                        newCoupon.dictToCoupon(dict: coupon, key: key)
+                        couponArray.append(newCoupon)
                     }
+                    
                 }
+                completion(couponArray)
+            } else {
+                completion(nil)
             }
-            
         } else {
-            completion("")
+            completion(nil)
         }
-    })
+    }
+}
+func createCoupon(coupon: Coupon) {
+    let dbRef = Database.database().reference()
+    dbRef.child(firCouponsNode).childByAutoId().setValue(coupon.couponToDict())
+}
+
+func getRestaurants(completion: @escaping ([String]) -> Void) {
+    let dbRef = Database.database().reference()
+    var restaurantArray: [String] = []
+    dbRef.child(firRestaurantsNode).observeSingleEvent(of: .value) { (snapshot) in
+        if snapshot.exists() {
+            if let restaurants = snapshot.value as? [String:AnyObject] {
+                for key in restaurants.keys {
+                    restaurantArray.append(key)
+                }
+                completion(restaurantArray)
+            } else {
+                completion([""])
+            }
+        } else {
+            completion([""])
+        }
+    }
+}
+
+extension String {
+    var numbers: String {
+        return String(characters.filter { "0"..."9" ~= $0 })
+    }
 }

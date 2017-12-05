@@ -37,10 +37,13 @@ func seedDatabase() {
                                       "description": "Delicious traditional american recipe",
                                       "isDone": false]
     let recipe = Recipe()
-    recipe.dictToRecipe(dict: recipedict2, key: "")
-    let url = URL(string:"https://www.laurengreutman.com/wp-content/uploads/2015/08/Pot-Roast-in-crockpot.png")
-    let data = try? Data(contentsOf: url!)
-    let image: UIImage = UIImage(data: data!)!
-    createRecipe(recipe: recipe, image: image)
-    
+//    recipe.dictToRecipe(dict: recipedict2, key: "")
+//    let url = URL(string:"https://www.laurengreutman.com/wp-content/uploads/2015/08/Pot-Roast-in-crockpot.png")
+//    let data = try? Data(contentsOf: url!)
+//    let image: UIImage = UIImage(data: data!)!
+//    createRecipe(recipe: recipe, image: image)
+    let coupondict: [String:Any?] = ["value": "2", "percent": "0.0", "recipes": ["empty"], "restaurant": "1"]
+    let coupon = Coupon()
+    coupon.dictToCoupon(dict: coupondict, key: "")
+    createCoupon(coupon: coupon)
 }

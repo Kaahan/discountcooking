@@ -39,11 +39,13 @@ class IndividualRecipeController: UIViewController,UIImagePickerControllerDelega
         individualTableView.register(ingredientsCell.nib, forCellReuseIdentifier: ingredientsCell.identifier)
         individualTableView.register(directionCell.nib, forCellReuseIdentifier: directionCell.identifier)
         individualTableView.register(uploadCell.nib, forCellReuseIdentifier: uploadCell.identifier)
+        individualTableView.backgroundColor = colors["light-grey"]
         picker!.delegate = self
     }
     override func viewDidDisappear(_ animated: Bool) {
         stopTimer()
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         //recipeViewModel.clearModel()
         startTimer()
@@ -56,7 +58,7 @@ class IndividualRecipeController: UIViewController,UIImagePickerControllerDelega
     func startTimer() {
         timer?.invalidate()   // just in case you had existing `Timer`, `invalidate` it before we lose our reference to it
         print("started timer")
-        timer = Timer.scheduledTimer(withTimeInterval: 2.0, repeats: true) { [weak self] _ in
+        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [weak self] _ in
             if (self?.recipeViewModel.buttonWasTapped)! {
                 print("button has been tapped")
                 self?.openCamera()

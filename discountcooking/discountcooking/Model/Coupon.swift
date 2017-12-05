@@ -7,26 +7,40 @@
 //
 
 import Foundation
+import QRCode
 
 class Coupon {
     
-    var value: Int
-    var percent: Float
-    var recipes: [Recipe]
-    var couponID: String
+    var value: Int = 0
+    var percent: Float = 0.0
+    var recipes: [String] = []
+    var couponID: String = ""
+    var restaurant: String = ""
+    init() {
+
+    }
     
-    init(id: String, value: Int = 0, percent: Float = 0.0, recipes: [Recipe]) {
-        self.value = value
-        self.percent = percent
-        self.recipes = recipes
-        self.couponID = id
+    func dictToCoupon(dict: [String:Any?], key: String) {
+        self.value = Int(dict["value"] as! String)!
+        self.percent = Float(dict["percent"] as! String)!
+        self.recipes = dict["recipes"] as! [String]
+        self.couponID = key
+        self.restaurant = dict["restaurant"] as! String
     }
+    
+    func couponToDict() -> [String:Any?] {
+        return ["value": String(self.value), "percent": String(self.percent), "recipes": self.recipes, "restaurant": self.restaurant]
+    }
+    
     //TODO: QRCode function
-    func generateQR(user: CurrentUser) {
-        
+    func generateQR(user: CurrentUser, coupon: Coupon) -> UIImage {
+        var user_id = ""
+        if let uid = user.id {
+            user_id = uid
+        }
+        let datastring: String = "\(user_id) \(coupon.couponID) \(coupon.value) "
+        let qrCode = QRCode(datastring.data(using: String.Encoding.utf8)!)
+        return qrCode.image!
     }
-    //TODO: Verify valid
-    func verify() {
-        
-    }
+    
 }

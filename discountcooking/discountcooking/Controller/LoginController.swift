@@ -24,6 +24,7 @@ class LoginController: UIViewController, UITextFieldDelegate {
         let tap = UITapGestureRecognizer(target: self.view, action: Selector("endEditing:"))
         tap.cancelsTouchesInView = false
         self.view.addGestureRecognizer(tap)
+        self.view.backgroundColor = colors["light-grey"]
     }
     
     @IBAction func goBack(_ sender: Any) {
@@ -67,6 +68,10 @@ class LoginController: UIViewController, UITextFieldDelegate {
 
         }
         
+    }
+    
+    @IBAction func toSignUp(_ sender: Any) {
+        performSegue(withIdentifier: "toSignUp", sender: self)
     }
     func loginSuccessful() {
         performSegue(withIdentifier: loginToMain, sender: self)

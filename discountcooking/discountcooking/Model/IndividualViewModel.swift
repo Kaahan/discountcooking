@@ -155,6 +155,7 @@ extension RecipeViewModel: UITableViewDataSource {
             if let item = item as? RecipeViewModelDescription, let cell = tableView.dequeueReusableCell(withIdentifier: descriptionCell.identifier, for: indexPath) as? descriptionCell{
                 cell.item = [item.name, "\(item.prepTime)", item.description]
                 cell.isUserInteractionEnabled = false
+                cell.backgroundColor = UIColor.clear
                 return cell
             }
         case .directions:
@@ -162,6 +163,7 @@ extension RecipeViewModel: UITableViewDataSource {
             if let item = item as? RecipeViewModelDirections, let cell = tableView.dequeueReusableCell(withIdentifier: directionCell.identifier, for: indexPath) as? directionCell {
                 cell.item = [String(indexPath.row + 1), item.directions[indexPath.row]]
                 cell.isUserInteractionEnabled = false
+                cell.backgroundColor = UIColor.clear
                 return cell
             }
         case .ingredients:
@@ -170,19 +172,23 @@ extension RecipeViewModel: UITableViewDataSource {
                 cell.item = item.ingredients[indexPath.row]
                 cell.isUserInteractionEnabled = false
                 cell.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: .greatestFiniteMagnitude)
+                cell.backgroundColor = UIColor.clear
                 return cell
             }
         case .image:
             if let item = item as? RecipeViewModelImageItem, let cell = tableView.dequeueReusableCell(withIdentifier: imageCell.identifier, for: indexPath) as? imageCell {
                 cell.item = item.pictureUrl
                 cell.isUserInteractionEnabled = false
+                cell.backgroundColor = UIColor.clear
                 return cell
             }
         case .upload:
             if let cell = tableView.dequeueReusableCell(withIdentifier: uploadCell.identifier, for: indexPath) as? uploadCell {
                 cell.uploadButton.tag = indexPath.row
                 cell.uploadButton.addTarget(self, action: #selector(RecipeViewModel.buttonTapped), for: UIControlEvents.touchUpInside)
+                cell.backgroundColor = UIColor.clear
                 return cell
+                
             }
             
         }

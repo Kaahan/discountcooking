@@ -20,6 +20,7 @@ class Recipe {
     var recipeID: String?
     var description: String = ""
     var imagePath: String = ""
+    var coupon: String = ""
     init() {
         
     }
@@ -34,9 +35,10 @@ class Recipe {
         restaurantID = dict["restaurantID"] as! String
         description = dict["description"] as! String
         imagePath = dict["imagePath"] as! String
+        coupon = dict["coupon"] as! String
     }
     func recipeToDict(recipe: Recipe) -> [String:Any?]{
-        return ["name": recipe.name, "prepTime": String(describing: recipe.prepTime), "ingredients": recipe.ingredients, "directions": recipe.directions, "restaurantID": recipe.restaurantID, "description": recipe.description, "imagePath": recipe.imagePath]
+        return ["name": recipe.name, "prepTime": String(describing: recipe.prepTime), "ingredients": recipe.ingredients, "directions": recipe.directions, "restaurantID": recipe.restaurantID, "description": recipe.description, "imagePath": recipe.imagePath, "coupon": recipe.coupon]
     }
     func stringprepTime() -> String {
         if self.prepTime > 60 {

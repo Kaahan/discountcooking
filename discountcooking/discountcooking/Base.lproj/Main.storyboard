@@ -49,11 +49,11 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qza-uF-WKm">
                                         <rect key="frame" x="0.0" y="69.5" width="375" height="69.5"/>
                                         <fontDescription key="fontDescription" name="Gravity-Light" family="Gravity" pointSize="17"/>
-                                        <state key="normal" title="Sign Up">
+                                        <state key="normal" title="Restaurant Login">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="signup:" destination="1LZ-Ib-yj9" eventType="touchUpInside" id="j6z-NA-WYG"/>
+                                            <action selector="restaurantLogin:" destination="1LZ-Ib-yj9" eventType="touchUpInside" id="iSm-7V-cf2"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -100,10 +100,10 @@
                     <connections>
                         <outlet property="background" destination="pfM-yj-xJj" id="QGU-sf-nfA"/>
                         <outlet property="login" destination="cxm-rY-olz" id="NVG-xT-MM3"/>
-                        <outlet property="signup" destination="Qza-uF-WKm" id="Jkz-Yh-IxE"/>
+                        <outlet property="restaurantLogin" destination="Qza-uF-WKm" id="Rh9-D9-nsf"/>
                         <outlet property="tagline" destination="V1m-xM-TTk" id="dz9-xV-8pO"/>
                         <segue destination="T0D-nI-Wf6" kind="show" identifier="toLogin" id="IXN-QZ-4oV"/>
-                        <segue destination="3vD-Wl-9t9" kind="show" identifier="toSignup" id="1n2-h7-dCg"/>
+                        <segue destination="MOA-6X-S7L" kind="show" identifier="toRestaurantLogin" id="jtV-Yh-62P"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nJ0-IK-We2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -125,7 +125,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zhC-3k-QJb">
                                 <rect key="frame" x="114" y="20" width="148.5" height="50.5"/>
                                 <fontDescription key="fontDescription" name="Gravity-Light" family="Gravity" pointSize="42"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.96862745098039216" green="0.76470588235294112" blue="0.19215686274509802" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vll-iV-BHR">
@@ -137,7 +137,7 @@
                                             <constraint firstAttribute="height" constant="50" id="iX1-Ng-2fS"/>
                                         </constraints>
                                         <color key="textColor" red="0.41960784309999999" green="0.47843137250000001" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <fontDescription key="fontDescription" name="Gravity-Bold" family="Gravity" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="Gravity-Light" family="Gravity" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
@@ -148,8 +148,8 @@
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ARA-Mp-kOf" customClass="KaedeTextField" customModule="discountcooking">
                                         <rect key="frame" x="0.0" y="50" width="355" height="49.5"/>
                                         <color key="textColor" red="0.41960784309999999" green="0.47843137250000001" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <fontDescription key="fontDescription" name="Gravity-Bold" family="Gravity" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <fontDescription key="fontDescription" name="Gravity-Light" family="Gravity" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
                                                 <color key="value" red="0.41960784309999999" green="0.47843137250000001" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -159,7 +159,7 @@
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0eh-L1-oqI" customClass="KaedeTextField" customModule="discountcooking" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="99.5" width="355" height="49.5"/>
                                         <color key="textColor" red="0.41960784309999999" green="0.47843137250000001" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <fontDescription key="fontDescription" name="Gravity-Bold" family="Gravity" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="Gravity-Light" family="Gravity" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
@@ -170,7 +170,7 @@
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Verify Password" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JcO-k3-g1n" customClass="KaedeTextField" customModule="discountcooking">
                                         <rect key="frame" x="0.0" y="149" width="355" height="50"/>
                                         <color key="textColor" red="0.41960784309999999" green="0.47843137250000001" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <fontDescription key="fontDescription" name="Gravity-Bold" family="Gravity" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="Gravity-Light" family="Gravity" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
@@ -187,7 +187,7 @@
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EwO-Mh-k4X" customClass="roundedButton" customModule="discountcooking" customModuleProvider="target">
                                 <rect key="frame" x="113.5" y="453.5" width="149" height="33"/>
-                                <color key="backgroundColor" red="0.41960784309999999" green="0.47843137250000001" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.96862745098039216" green="0.76470588235294112" blue="0.19215686274509802" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="EwO-Mh-k4X" secondAttribute="height" multiplier="9:2" id="mFF-S5-GUc"/>
                                 </constraints>
@@ -227,6 +227,504 @@
             </objects>
             <point key="canvasLocation" x="-820" y="607.64617691154433"/>
         </scene>
+        <!--Restaurant Login Controller-->
+        <scene sceneID="Zbw-ew-kC6">
+            <objects>
+                <viewController id="MOA-6X-S7L" customClass="RestaurantLoginController" customModule="discountcooking" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YrN-VK-Xlg"/>
+                        <viewControllerLayoutGuide type="bottom" id="Vhq-5T-LLF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4Zl-r1-cJX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ea4-TX-6yl">
+                                <rect key="frame" x="138" y="20" width="100" height="48"/>
+                                <fontDescription key="fontDescription" name="Gravity-Light" family="Gravity" pointSize="40"/>
+                                <color key="textColor" red="0.96862745098039216" green="0.76470588235294112" blue="0.19215686274509802" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="TcE-9f-WYe">
+                                <rect key="frame" x="10" y="293.5" width="355" height="80"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wiL-7i-Um8" customClass="KaedeTextField" customModule="discountcooking">
+                                        <rect key="frame" x="0.0" y="0.0" width="355" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="ZiP-9j-Z6V"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.41960784309999999" green="0.47843137250000001" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="Gravity-Light" family="Gravity" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                <color key="value" red="0.41960784309999999" green="0.47843137250000001" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B4C-vA-rTa" customClass="KaedeTextField" customModule="discountcooking" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="40" width="355" height="40"/>
+                                        <color key="textColor" red="0.41960784309999999" green="0.47843137250000001" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="Gravity-Light" family="Gravity" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                <color key="value" red="0.41960784309999999" green="0.47843137250000001" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="wiL-7i-Um8" firstAttribute="height" secondItem="B4C-vA-rTa" secondAttribute="height" id="MjJ-On-lPE"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xgR-G6-lkW" customClass="roundedButton" customModule="discountcooking" customModuleProvider="target">
+                                <rect key="frame" x="114" y="414.5" width="148.5" height="33"/>
+                                <color key="backgroundColor" red="0.96862745098039216" green="0.76470588235294112" blue="0.19215686274509802" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="xgR-G6-lkW" secondAttribute="height" multiplier="9:2" id="SMR-TS-4R5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Gravity-Light" family="Gravity" pointSize="17"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="login:" destination="T0D-nI-Wf6" eventType="touchUpInside" id="liR-1N-OAo"/>
+                                    <action selector="restaurantLogin:" destination="MOA-6X-S7L" eventType="touchUpInside" id="lDC-P3-LhB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yZ6-TH-270">
+                                <rect key="frame" x="16" y="29" width="62.5" height="33"/>
+                                <fontDescription key="fontDescription" name="Gravity-Light" family="Gravity" pointSize="17"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" red="0.41960784309999999" green="0.47843137250000001" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="goBack:" destination="T0D-nI-Wf6" eventType="touchUpInside" id="afp-4D-Pga"/>
+                                    <segue destination="C0W-QO-T8f" kind="unwind" unwindAction="unwindToInitialWithSegue:" id="Q0j-sZ-ctg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EPv-uH-hoM">
+                                <rect key="frame" x="146" y="455" width="82" height="33"/>
+                                <fontDescription key="fontDescription" name="Gravity-Light" family="Gravity" pointSize="17"/>
+                                <state key="normal" title="Or Sign Up">
+                                    <color key="titleColor" red="0.41960784309999999" green="0.47843137250000001" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="signUpPressed:" destination="MOA-6X-S7L" eventType="touchUpInside" id="KR4-hC-GJe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xgR-G6-lkW" firstAttribute="centerX" secondItem="4Zl-r1-cJX" secondAttribute="centerX" id="7EB-4q-Mjq"/>
+                            <constraint firstItem="EPv-uH-hoM" firstAttribute="top" secondItem="xgR-G6-lkW" secondAttribute="bottom" constant="7.5" id="8MK-Mw-uQG"/>
+                            <constraint firstItem="EPv-uH-hoM" firstAttribute="centerX" secondItem="4Zl-r1-cJX" secondAttribute="centerX" id="8mL-Fe-yfs"/>
+                            <constraint firstItem="Ea4-TX-6yl" firstAttribute="top" secondItem="YrN-VK-Xlg" secondAttribute="bottom" id="BU7-8v-gVz"/>
+                            <constraint firstItem="Ea4-TX-6yl" firstAttribute="leading" secondItem="yZ6-TH-270" secondAttribute="trailing" constant="59.5" id="Bmc-qW-ao9"/>
+                            <constraint firstAttribute="trailing" secondItem="TcE-9f-WYe" secondAttribute="trailing" constant="10" id="QDA-1a-J0r"/>
+                            <constraint firstItem="Ea4-TX-6yl" firstAttribute="centerX" secondItem="4Zl-r1-cJX" secondAttribute="centerX" id="QTH-mF-0Ui"/>
+                            <constraint firstItem="yZ6-TH-270" firstAttribute="leading" secondItem="4Zl-r1-cJX" secondAttribute="leading" constant="16" id="U93-HS-Ide"/>
+                            <constraint firstItem="yZ6-TH-270" firstAttribute="top" secondItem="YrN-VK-Xlg" secondAttribute="bottom" constant="9" id="a5d-Wo-fnv"/>
+                            <constraint firstItem="TcE-9f-WYe" firstAttribute="centerY" secondItem="4Zl-r1-cJX" secondAttribute="centerY" id="dRT-ZI-Wqn"/>
+                            <constraint firstItem="xgR-G6-lkW" firstAttribute="top" secondItem="TcE-9f-WYe" secondAttribute="bottom" constant="41" id="qXT-l2-f2l"/>
+                            <constraint firstItem="TcE-9f-WYe" firstAttribute="leading" secondItem="4Zl-r1-cJX" secondAttribute="leading" constant="10" id="vce-h5-SQn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="wiL-7i-Um8" id="PDR-Dv-VcN"/>
+                        <outlet property="passwordTextField" destination="B4C-vA-rTa" id="3WI-yO-Yaw"/>
+                        <segue destination="Q1z-HS-K3Y" kind="show" identifier="restaurantLoginToMain" id="KDe-W5-tJn"/>
+                        <segue destination="oZq-oZ-XaV" kind="show" identifier="restaurantLoginToSignUp" id="11f-L9-3a3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1yI-UD-Zqt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="C0W-QO-T8f" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-822" y="2507"/>
+        </scene>
+        <!--Restaurant Signup Controller-->
+        <scene sceneID="YSi-K6-hXA">
+            <objects>
+                <viewController id="oZq-oZ-XaV" customClass="RestaurantSignupController" customModule="discountcooking" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6qv-OD-TmG"/>
+                        <viewControllerLayoutGuide type="bottom" id="Bba-sl-R8X"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xHb-Sx-Gr0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vjl-Hc-mUX">
+                                <rect key="frame" x="113" y="28" width="148.5" height="50.5"/>
+                                <fontDescription key="fontDescription" name="Gravity-Light" family="Gravity" pointSize="42"/>
+                                <color key="textColor" red="0.96862745100000003" green="0.76470588240000004" blue="0.19215686269999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="haS-OZ-bmq">
+                                <rect key="frame" x="10" y="209.5" width="355" height="248.5"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Restaurant Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LMA-cA-H8u" customClass="KaedeTextField" customModule="discountcooking" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="355" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="rOP-nh-Ve9"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.41960784309999999" green="0.47843137250000001" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="Gravity-Light" family="Gravity" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                <color key="value" red="0.41960784309999999" green="0.47843137250000001" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VXq-gX-iao" customClass="KaedeTextField" customModule="discountcooking">
+                                        <rect key="frame" x="0.0" y="50" width="355" height="49.5"/>
+                                        <color key="textColor" red="0.41960784309999999" green="0.47843137250000001" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="Gravity-Light" family="Gravity" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                <color key="value" red="0.41960784309999999" green="0.47843137250000001" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phone #" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sla-WO-YtU" customClass="KaedeTextField" customModule="discountcooking">
+                                        <rect key="frame" x="0.0" y="99.5" width="355" height="49.5"/>
+                                        <color key="textColor" red="0.41960784309999999" green="0.47843137250000001" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="Gravity-Light" family="Gravity" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                <color key="value" red="0.41960784309999999" green="0.47843137250000001" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RL3-6g-YVF" customClass="KaedeTextField" customModule="discountcooking" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="149" width="355" height="49.5"/>
+                                        <color key="textColor" red="0.41960784309999999" green="0.47843137250000001" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="Gravity-Light" family="Gravity" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                <color key="value" red="0.41960784309999999" green="0.47843137250000001" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Verify Password" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FnW-MI-Zf0" customClass="KaedeTextField" customModule="discountcooking">
+                                        <rect key="frame" x="0.0" y="198.5" width="355" height="50"/>
+                                        <color key="textColor" red="0.41960784309999999" green="0.47843137250000001" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="Gravity-Light" family="Gravity" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                <color key="value" red="0.41960784309999999" green="0.47843137250000001" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Sla-WO-YtU" firstAttribute="height" secondItem="VXq-gX-iao" secondAttribute="height" id="5hM-BY-aFi"/>
+                                    <constraint firstItem="LMA-cA-H8u" firstAttribute="height" secondItem="VXq-gX-iao" secondAttribute="height" id="IpI-Zs-aVW"/>
+                                    <constraint firstItem="FnW-MI-Zf0" firstAttribute="height" secondItem="RL3-6g-YVF" secondAttribute="height" id="oR6-gz-TDW"/>
+                                    <constraint firstItem="RL3-6g-YVF" firstAttribute="height" secondItem="Sla-WO-YtU" secondAttribute="height" id="zE1-R0-Iy0"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rMC-hz-TfJ" customClass="roundedButton" customModule="discountcooking" customModuleProvider="target">
+                                <rect key="frame" x="113" y="497" width="149" height="33"/>
+                                <color key="backgroundColor" red="0.96862745100000003" green="0.76470588240000004" blue="0.19215686269999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="rMC-hz-TfJ" secondAttribute="height" multiplier="9:2" id="MKF-Ut-M16"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Gravity-Light" family="Gravity" pointSize="17"/>
+                                <state key="normal" title="Sign Up">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="login:" destination="T0D-nI-Wf6" eventType="touchUpInside" id="yPh-2v-biT"/>
+                                    <action selector="signupWasPressed:" destination="oZq-oZ-XaV" eventType="touchUpInside" id="Rgp-jF-NwH"/>
+                                    <action selector="signupWasPressed:" destination="3vD-Wl-9t9" eventType="touchUpInside" id="Xdi-gh-Hkd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Vjl-Hc-mUX" firstAttribute="top" secondItem="6qv-OD-TmG" secondAttribute="bottom" constant="8" id="5kY-M7-OF4"/>
+                            <constraint firstAttribute="trailing" secondItem="haS-OZ-bmq" secondAttribute="trailing" constant="10" id="AwE-OK-WWg"/>
+                            <constraint firstItem="rMC-hz-TfJ" firstAttribute="top" secondItem="haS-OZ-bmq" secondAttribute="bottom" constant="39" id="BJp-XV-orR"/>
+                            <constraint firstItem="haS-OZ-bmq" firstAttribute="leading" secondItem="xHb-Sx-Gr0" secondAttribute="leading" constant="10" id="Gdx-cy-OPl"/>
+                            <constraint firstItem="haS-OZ-bmq" firstAttribute="centerY" secondItem="xHb-Sx-Gr0" secondAttribute="centerY" id="L1H-dZ-toC"/>
+                            <constraint firstItem="rMC-hz-TfJ" firstAttribute="centerX" secondItem="xHb-Sx-Gr0" secondAttribute="centerX" id="hKE-7F-QTs"/>
+                            <constraint firstItem="Vjl-Hc-mUX" firstAttribute="centerX" secondItem="xHb-Sx-Gr0" secondAttribute="centerX" id="zsO-5t-m22"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="signupEmail" destination="VXq-gX-iao" id="32E-ab-Fsk"/>
+                        <outlet property="signupName" destination="LMA-cA-H8u" id="0jG-N2-wId"/>
+                        <outlet property="signupPass" destination="RL3-6g-YVF" id="WRZ-3T-7Kj"/>
+                        <outlet property="signupPhone" destination="Sla-WO-YtU" id="dBC-1a-LTD"/>
+                        <outlet property="signupVerifPass" destination="FnW-MI-Zf0" id="bgk-j2-zs3"/>
+                        <segue destination="Krj-a6-Vdp" kind="unwind" identifier="unwindToLogin" unwindAction="unwindToLoginWithSegue:" id="wOA-J4-qyp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xs0-P0-PFI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Krj-a6-Vdp" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-835" y="3175"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="V4K-uo-QFk">
+            <objects>
+                <navigationController id="Xq7-1l-1Mf" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Uul-0C-Fgs"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="a2c-DC-cU3">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="eT5-aj-Jla" kind="relationship" relationship="rootViewController" id="Tdv-vQ-ZjG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YhH-SM-f8T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1254" y="3000"/>
+        </scene>
+        <!--Manage-->
+        <scene sceneID="aLz-G2-WvJ">
+            <objects>
+                <viewController id="eT5-aj-Jla" customClass="ManageController" customModule="discountcooking" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oIt-ZD-HZh"/>
+                        <viewControllerLayoutGuide type="bottom" id="j0t-gU-lye"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="asU-o5-Db7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ew-kW-Hrw" customClass="roundedButton" customModule="discountcooking" customModuleProvider="target">
+                                <rect key="frame" x="113" y="271" width="148.5" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="4ew-kW-Hrw" secondAttribute="height" multiplier="9:2" id="UBH-lK-mly"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Gravity-Light" family="Gravity" pointSize="17"/>
+                                <state key="normal" title="New Recipe">
+                                    <color key="titleColor" red="0.96862745100000003" green="0.53333333329999999" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="newRecipe:" destination="eT5-aj-Jla" eventType="touchUpInside" id="QPu-RP-aXI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Na-Rd-nTf" customClass="roundedButton" customModule="discountcooking" customModuleProvider="target">
+                                <rect key="frame" x="113" y="351" width="148.5" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="9Na-Rd-nTf" secondAttribute="height" multiplier="9:2" id="MJY-4q-MX3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Gravity-Light" family="Gravity" pointSize="17"/>
+                                <state key="normal" title="New Coupon">
+                                    <color key="titleColor" red="0.96862745100000003" green="0.53333333329999999" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="newCoupon:" destination="eT5-aj-Jla" eventType="touchUpInside" id="Cbc-Jo-raB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9Na-Rd-nTf" firstAttribute="centerX" secondItem="asU-o5-Db7" secondAttribute="centerX" id="HYZ-pV-ziV"/>
+                            <constraint firstItem="4ew-kW-Hrw" firstAttribute="centerX" secondItem="asU-o5-Db7" secondAttribute="centerX" id="IX9-1G-YjM"/>
+                            <constraint firstItem="j0t-gU-lye" firstAttribute="top" secondItem="9Na-Rd-nTf" secondAttribute="bottom" constant="234" id="idg-rw-5BI"/>
+                            <constraint firstItem="9Na-Rd-nTf" firstAttribute="top" secondItem="4ew-kW-Hrw" secondAttribute="bottom" constant="47" id="jdB-RI-aLn"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Manage" image="manage-icon" landscapeImage="manage-icon" id="GNk-QU-IYi"/>
+                    <navigationItem key="navigationItem" title="Manage" id="YET-cF-10t"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="Tcv-OF-drH" kind="show" identifier="toCreateRecipe" id="EUV-oT-IGt"/>
+                        <segue destination="9sy-Dc-X7Z" kind="show" identifier="toCreateCoupon" id="XbS-BR-9Yq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r25-8G-WYY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2302" y="3000"/>
+        </scene>
+        <!--Create Recipe Controller-->
+        <scene sceneID="Aln-2s-dwn">
+            <objects>
+                <viewController id="Tcv-OF-drH" customClass="CreateRecipeController" customModule="discountcooking" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PTr-Lu-5YT"/>
+                        <viewControllerLayoutGuide type="bottom" id="gPR-dk-rhd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="htt-Dd-VkS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="iBs-JI-UwC">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="yLy-FX-dKL">
+                            <connections>
+                                <action selector="saveRecipe:" destination="Tcv-OF-drH" id="WHV-37-91O"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="csX-ay-8sF" kind="unwind" identifier="goBackToManage" unwindAction="unwindToManageWithSegue:" id="PJL-p6-d7c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BJN-ce-tGs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="csX-ay-8sF" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="3478" y="2643"/>
+        </scene>
+        <!--Create Coupon Controller-->
+        <scene sceneID="Zhx-9B-voJ">
+            <objects>
+                <viewController id="9sy-Dc-X7Z" customClass="CreateCouponController" customModule="discountcooking" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iki-1P-EYv"/>
+                        <viewControllerLayoutGuide type="bottom" id="qsP-ei-F7A"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5So-wH-Eb3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aN8-0h-mg2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3478" y="3370"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="sqf-d3-KPq">
+            <objects>
+                <navigationController id="1BK-8R-1Z4" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="xtC-1e-IHR"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZaA-n2-rV5">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="OLc-Rj-X4p" kind="relationship" relationship="rootViewController" id="vfG-wi-8zR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UlM-c4-uM3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1254" y="2196"/>
+        </scene>
+        <!--VerifyQRCode-->
+        <scene sceneID="PB8-Ej-ZWj">
+            <objects>
+                <viewController title="VerifyQRCode" id="OLc-Rj-X4p" customClass="VerifyQRController" customModule="discountcooking" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3I7-Gq-xTV"/>
+                        <viewControllerLayoutGuide type="bottom" id="z1n-di-Z3S"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SkU-Qb-TcL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="039-Pg-srK">
+                                <rect key="frame" x="16" y="64" width="343" height="449"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hZl-pk-Rky">
+                                <rect key="frame" x="16" y="536" width="49" height="30"/>
+                                <state key="normal" title="Accept"/>
+                                <connections>
+                                    <action selector="acceptClick:" destination="OLc-Rj-X4p" eventType="touchUpInside" id="3wL-ro-AX6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZR1-rB-BEV">
+                                <rect key="frame" x="307" y="536" width="52" height="30"/>
+                                <state key="normal" title="Decline"/>
+                                <connections>
+                                    <action selector="declineClick:" destination="OLc-Rj-X4p" eventType="touchUpInside" id="SeK-Bg-JdT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zOF-Nm-URZ" customClass="roundedButton" customModule="discountcooking" customModuleProvider="target">
+                                <rect key="frame" x="113" y="580" width="148.5" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="zOF-Nm-URZ" secondAttribute="height" multiplier="9:2" id="qaU-1a-e8j"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Gravity-Light" family="Gravity" pointSize="17"/>
+                                <state key="normal" title="Scan QR Code">
+                                    <color key="titleColor" red="0.96862745100000003" green="0.53333333329999999" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="scanQRCode:" destination="OLc-Rj-X4p" eventType="touchUpInside" id="OhJ-xf-Lsa"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="alS-80-j5L">
+                                <rect key="frame" x="137.5" y="521" width="100" height="20"/>
+                                <fontDescription key="fontDescription" name="Gravity-Light" family="Gravity" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zOF-Nm-URZ" firstAttribute="centerX" secondItem="SkU-Qb-TcL" secondAttribute="centerX" id="11M-0z-hXP"/>
+                            <constraint firstAttribute="trailing" secondItem="039-Pg-srK" secondAttribute="trailing" constant="16" id="1YQ-Nm-gXD"/>
+                            <constraint firstItem="zOF-Nm-URZ" firstAttribute="top" secondItem="hZl-pk-Rky" secondAttribute="bottom" constant="14" id="2Kg-ts-WfG"/>
+                            <constraint firstAttribute="trailing" secondItem="ZR1-rB-BEV" secondAttribute="trailing" constant="16" id="3fN-jW-Q5A"/>
+                            <constraint firstItem="z1n-di-Z3S" firstAttribute="top" secondItem="zOF-Nm-URZ" secondAttribute="bottom" constant="5" id="9h5-li-G7f"/>
+                            <constraint firstItem="alS-80-j5L" firstAttribute="centerX" secondItem="SkU-Qb-TcL" secondAttribute="centerX" id="L3B-56-2jI"/>
+                            <constraint firstItem="ZR1-rB-BEV" firstAttribute="top" secondItem="alS-80-j5L" secondAttribute="bottom" constant="-5" id="Q9J-fT-BBS"/>
+                            <constraint firstItem="039-Pg-srK" firstAttribute="top" secondItem="3I7-Gq-xTV" secondAttribute="bottom" id="W2o-vh-sEy"/>
+                            <constraint firstItem="alS-80-j5L" firstAttribute="top" secondItem="039-Pg-srK" secondAttribute="bottom" constant="8" id="eEo-C7-mnY"/>
+                            <constraint firstItem="hZl-pk-Rky" firstAttribute="top" secondItem="alS-80-j5L" secondAttribute="bottom" constant="-5" id="jJB-O5-UNy"/>
+                            <constraint firstItem="hZl-pk-Rky" firstAttribute="leading" secondItem="SkU-Qb-TcL" secondAttribute="leading" constant="16" id="jzE-n7-RGl"/>
+                            <constraint firstItem="zOF-Nm-URZ" firstAttribute="top" secondItem="ZR1-rB-BEV" secondAttribute="bottom" constant="14" id="thC-k3-WPS"/>
+                            <constraint firstItem="039-Pg-srK" firstAttribute="leading" secondItem="SkU-Qb-TcL" secondAttribute="leading" constant="16" id="vmF-3r-ytC"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Verify" image="coupon-icon" landscapeImage="coupon-icon" id="sWd-kn-ctk"/>
+                    <navigationItem key="navigationItem" title="Verify QR Code" id="5kv-II-Cu7"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="acceptButton" destination="hZl-pk-Rky" id="97x-CX-1mV"/>
+                        <outlet property="declineButton" destination="ZR1-rB-BEV" id="JVp-rw-Zj8"/>
+                        <outlet property="recipeNameLabel" destination="alS-80-j5L" id="SXo-h7-Ekz"/>
+                        <outlet property="resultImageView" destination="039-Pg-srK" id="yUL-YU-438"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9is-NF-u5F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2301.5999999999999" y="2196.2518740629689"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="vNi-zA-2YZ">
+            <objects>
+                <tabBarController id="Q1z-HS-K3Y" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Vdy-dY-K94">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="1BK-8R-1Z4" kind="relationship" relationship="viewControllers" id="WdQ-y9-s0w"/>
+                        <segue destination="Xq7-1l-1Mf" kind="relationship" relationship="viewControllers" id="s3E-Gy-7i5"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X0T-ek-VhS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="303" y="2508"/>
+        </scene>
         <!--Login Controller-->
         <scene sceneID="T7c-Iu-DdA">
             <objects>
@@ -242,7 +740,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Xn-at-0Zx">
                                 <rect key="frame" x="138" y="20" width="100" height="48"/>
                                 <fontDescription key="fontDescription" name="Gravity-Light" family="Gravity" pointSize="40"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.96862745100000003" green="0.53333333329999999" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="eP1-cM-OGs">
@@ -254,8 +752,8 @@
                                             <constraint firstAttribute="height" constant="40" id="Vno-a6-hpQ"/>
                                         </constraints>
                                         <color key="textColor" red="0.41960784309999999" green="0.47843137250000001" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <fontDescription key="fontDescription" name="Gravity-Bold" family="Gravity" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <fontDescription key="fontDescription" name="Gravity-Light" family="Gravity" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardType="emailAddress"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
                                                 <color key="value" red="0.41960784313725491" green="0.47843137254901957" blue="0.5607843137254902" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -265,8 +763,8 @@
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DuN-Xk-hro" customClass="KaedeTextField" customModule="discountcooking" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="40" width="355" height="40"/>
                                         <color key="textColor" red="0.41960784309999999" green="0.47843137250000001" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <fontDescription key="fontDescription" name="Gravity-Bold" family="Gravity" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <fontDescription key="fontDescription" name="Gravity-Light" family="Gravity" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" spellCheckingType="no" secureTextEntry="YES"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
                                                 <color key="value" red="0.41960784309999999" green="0.47843137250000001" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -278,18 +776,9 @@
                                     <constraint firstItem="T7G-hA-Tty" firstAttribute="height" secondItem="DuN-Xk-hro" secondAttribute="height" id="bAQ-r8-l9j"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Pq-nY-VCR">
-                                <rect key="frame" x="0.0" y="20" width="62" height="30"/>
-                                <state key="normal" title="Back">
-                                    <color key="titleColor" red="0.41960784309999999" green="0.47843137250000001" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </state>
-                                <connections>
-                                    <action selector="goBack:" destination="T0D-nI-Wf6" eventType="touchUpInside" id="zIR-15-yZ8"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MVh-eT-KDg" customClass="roundedButton" customModule="discountcooking" customModuleProvider="target">
                                 <rect key="frame" x="114" y="414.5" width="148.5" height="33"/>
-                                <color key="backgroundColor" red="0.41960784309999999" green="0.47843137250000001" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.96862745098039216" green="0.53333333333333333" blue="0.18431372549019609" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="MVh-eT-KDg" secondAttribute="height" multiplier="9:2" id="uNN-2W-LnO"/>
                                 </constraints>
@@ -304,18 +793,40 @@
                                     <action selector="login:" destination="T0D-nI-Wf6" eventType="touchUpInside" id="A3Y-5p-gac"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4g3-ob-xY5">
+                                <rect key="frame" x="146" y="455" width="82" height="33"/>
+                                <fontDescription key="fontDescription" name="Gravity-Light" family="Gravity" pointSize="17"/>
+                                <state key="normal" title="Or Sign Up">
+                                    <color key="titleColor" red="0.41960784309999999" green="0.47843137250000001" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="toSignUp:" destination="T0D-nI-Wf6" eventType="touchUpInside" id="RDm-vD-hpf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Pq-nY-VCR">
+                                <rect key="frame" x="10" y="29" width="62" height="33"/>
+                                <fontDescription key="fontDescription" name="Gravity-Light" family="Gravity" pointSize="17"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" red="0.41960784309999999" green="0.47843137250000001" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="goBack:" destination="T0D-nI-Wf6" eventType="touchUpInside" id="zIR-15-yZ8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="eP1-cM-OGs" firstAttribute="centerY" secondItem="t9L-dD-gf5" secondAttribute="centerY" id="5cb-9E-I6j"/>
+                            <constraint firstItem="4g3-ob-xY5" firstAttribute="top" secondItem="MVh-eT-KDg" secondAttribute="bottom" constant="7.5" id="FvF-xg-63J"/>
                             <constraint firstItem="MVh-eT-KDg" firstAttribute="centerX" secondItem="t9L-dD-gf5" secondAttribute="centerX" id="GAC-J5-VYx"/>
-                            <constraint firstItem="1Pq-nY-VCR" firstAttribute="top" secondItem="fpr-Zb-0lY" secondAttribute="bottom" id="HDN-j6-ukM"/>
                             <constraint firstAttribute="trailing" secondItem="eP1-cM-OGs" secondAttribute="trailing" constant="10" id="Ibe-0w-7S2"/>
+                            <constraint firstItem="1Pq-nY-VCR" firstAttribute="top" secondItem="fpr-Zb-0lY" secondAttribute="bottom" constant="9" id="IzV-0n-IYw"/>
+                            <constraint firstItem="7Xn-at-0Zx" firstAttribute="leading" secondItem="1Pq-nY-VCR" secondAttribute="trailing" constant="66" id="Pjz-91-rjF"/>
                             <constraint firstItem="7Xn-at-0Zx" firstAttribute="top" secondItem="fpr-Zb-0lY" secondAttribute="bottom" id="hZD-W4-R9Y"/>
                             <constraint firstItem="MVh-eT-KDg" firstAttribute="top" secondItem="eP1-cM-OGs" secondAttribute="bottom" constant="41" id="ihl-cs-pUJ"/>
                             <constraint firstItem="7Xn-at-0Zx" firstAttribute="centerX" secondItem="t9L-dD-gf5" secondAttribute="centerX" id="mai-DY-lFb"/>
-                            <constraint firstItem="1Pq-nY-VCR" firstAttribute="leading" secondItem="t9L-dD-gf5" secondAttribute="leading" id="vn6-eO-uHC"/>
-                            <constraint firstItem="7Xn-at-0Zx" firstAttribute="leading" secondItem="1Pq-nY-VCR" secondAttribute="trailing" constant="76" id="zHA-zI-Mue"/>
+                            <constraint firstItem="1Pq-nY-VCR" firstAttribute="leading" secondItem="t9L-dD-gf5" secondAttribute="leading" constant="10" id="nXF-5p-Yva"/>
+                            <constraint firstItem="4g3-ob-xY5" firstAttribute="centerX" secondItem="t9L-dD-gf5" secondAttribute="centerX" id="pQC-2m-Qx5"/>
                             <constraint firstItem="eP1-cM-OGs" firstAttribute="leading" secondItem="t9L-dD-gf5" secondAttribute="leading" constant="10" id="zY0-wS-mSC"/>
                         </constraints>
                     </view>
@@ -324,6 +835,7 @@
                         <outlet property="passwordTextField" destination="DuN-Xk-hro" id="So2-Bc-SM7"/>
                         <segue destination="svl-KG-BK2" kind="show" identifier="loginToMain" id="UeE-8Y-DPu"/>
                         <segue destination="rT8-t7-AH8" kind="unwind" identifier="unwindToInitialFromLogin" unwindAction="unwindToInitialWithSegue:" id="oix-kS-HlV"/>
+                        <segue destination="3vD-Wl-9t9" kind="show" identifier="toSignUp" id="sDs-Sm-A9e"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kfL-rB-8a7" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -342,30 +854,12 @@
                     </tabBar>
                     <connections>
                         <segue destination="HaZ-tf-Nua" kind="relationship" relationship="viewControllers" id="euB-Al-kdC"/>
-                        <segue destination="N63-LP-T5R" kind="relationship" relationship="viewControllers" id="ekW-kL-e2T"/>
                         <segue destination="VdT-ba-InX" kind="relationship" relationship="viewControllers" id="I89-j7-f3o"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="82e-X6-SQ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="343" y="126"/>
-        </scene>
-        <!--Item-->
-        <scene sceneID="DBU-9d-hca">
-            <objects>
-                <navigationController id="N63-LP-T5R" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="rmS-8Z-Ngu"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oM1-MJ-oW6">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="KTy-an-xpc" kind="relationship" relationship="rootViewController" id="v7C-Mp-rRA"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nbk-Ua-Ihd" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1273" y="608"/>
         </scene>
         <!--Item-->
         <scene sceneID="Cvf-fL-Fj9">
@@ -376,30 +870,119 @@
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <connections>
+                        <segue destination="3mp-7g-6td" kind="relationship" relationship="rootViewController" id="1CE-mO-JCZ"/>
+                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ziU-p2-foD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1273" y="1445"/>
         </scene>
-        <!--Item-->
-        <scene sceneID="YcI-ma-xHF">
+        <!--Coupons-->
+        <scene sceneID="Smj-ax-UnW">
             <objects>
-                <viewController id="KTy-an-xpc" sceneMemberID="viewController">
+                <viewController id="3mp-7g-6td" customClass="CouponController" customModule="discountcooking" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="x1r-2N-Nqu"/>
-                        <viewControllerLayoutGuide type="bottom" id="vux-2H-ZL7"/>
+                        <viewControllerLayoutGuide type="top" id="mUu-Z3-HQu"/>
+                        <viewControllerLayoutGuide type="bottom" id="kRZ-oH-0zO"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="tQo-hL-7XF">
+                    <view key="view" contentMode="scaleToFill" id="IHU-eS-tBQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ccB-mP-Wrj">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="couponCell" id="D11-1o-gsl" customClass="couponControllerCell" customModule="discountcooking" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="D11-1o-gsl" id="9ui-Zw-QtN">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurant Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dhf-fM-5AQ">
+                                                    <rect key="frame" x="15" y="11.5" width="130" height="56.5"/>
+                                                    <fontDescription key="fontDescription" name="Gravity-Light" family="Gravity" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coupon Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9dL-li-Pmz">
+                                                    <rect key="frame" x="251.5" y="11.5" width="108.5" height="56.5"/>
+                                                    <fontDescription key="fontDescription" name="Gravity-Light" family="Gravity" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="9dL-li-Pmz" secondAttribute="bottom" constant="11.5" id="3sB-kg-ZC3"/>
+                                                <constraint firstItem="9dL-li-Pmz" firstAttribute="centerY" secondItem="9ui-Zw-QtN" secondAttribute="centerY" id="KcZ-sb-CD0"/>
+                                                <constraint firstAttribute="bottom" secondItem="Dhf-fM-5AQ" secondAttribute="bottom" constant="11.5" id="NeZ-KY-1dz"/>
+                                                <constraint firstAttribute="trailing" secondItem="9dL-li-Pmz" secondAttribute="trailing" constant="15" id="Tcv-JS-YfN"/>
+                                                <constraint firstItem="Dhf-fM-5AQ" firstAttribute="centerY" secondItem="9ui-Zw-QtN" secondAttribute="centerY" id="bkl-5x-UqJ"/>
+                                                <constraint firstItem="Dhf-fM-5AQ" firstAttribute="leading" secondItem="9ui-Zw-QtN" secondAttribute="leading" constant="15" id="sLd-Gn-VkQ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="couponName" destination="9dL-li-Pmz" id="5it-HJ-Dnt"/>
+                                            <outlet property="restaurantName" destination="Dhf-fM-5AQ" id="sg8-2h-Wwk"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ccB-mP-Wrj" firstAttribute="height" secondItem="IHU-eS-tBQ" secondAttribute="height" id="2jx-PV-RVQ"/>
+                            <constraint firstItem="ccB-mP-Wrj" firstAttribute="centerX" secondItem="IHU-eS-tBQ" secondAttribute="centerX" id="CjR-H3-2r7"/>
+                            <constraint firstItem="ccB-mP-Wrj" firstAttribute="width" secondItem="IHU-eS-tBQ" secondAttribute="width" id="Lfj-dK-8Fc"/>
+                            <constraint firstItem="ccB-mP-Wrj" firstAttribute="centerY" secondItem="IHU-eS-tBQ" secondAttribute="centerY" id="x6J-vU-gDQ"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="WRr-yq-T7e"/>
-                    <navigationItem key="navigationItem" id="45c-UY-ESZ"/>
+                    <tabBarItem key="tabBarItem" title="Coupons" image="coupon-icon" landscapeImage="coupon-icon" id="3mt-uL-RZn"/>
+                    <navigationItem key="navigationItem" title="Coupons" id="ME8-2J-4kd"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="couponTableView" destination="ccB-mP-Wrj" id="hml-EA-8RJ"/>
+                        <segue destination="dGo-gx-pUK" kind="show" identifier="toIndividualCoupon" id="WX6-4d-Ae0"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZZS-sj-9R3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LDj-Rq-zyY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2302" y="608"/>
+            <point key="canvasLocation" x="2301.5999999999999" y="1443.3283358320841"/>
+        </scene>
+        <!--Individual Coupon Controller-->
+        <scene sceneID="aG9-Ne-rlc">
+            <objects>
+                <viewController id="dGo-gx-pUK" customClass="IndividualCouponController" customModule="discountcooking" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GgX-2y-LZi"/>
+                        <viewControllerLayoutGuide type="bottom" id="fWb-Yc-4Qt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GWR-2p-KkR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0oQ-Cm-8C9">
+                                <rect key="frame" x="0.0" y="64" width="375" height="539"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0oQ-Cm-8C9" firstAttribute="width" secondItem="GWR-2p-KkR" secondAttribute="width" id="E7H-i8-ZtF"/>
+                            <constraint firstItem="0oQ-Cm-8C9" firstAttribute="top" secondItem="GgX-2y-LZi" secondAttribute="bottom" id="K8o-Mi-TjC"/>
+                            <constraint firstItem="0oQ-Cm-8C9" firstAttribute="centerY" secondItem="GWR-2p-KkR" secondAttribute="centerY" id="Km3-l1-xvg"/>
+                            <constraint firstItem="0oQ-Cm-8C9" firstAttribute="centerX" secondItem="GWR-2p-KkR" secondAttribute="centerX" id="bfY-7M-TF8"/>
+                            <constraint firstItem="fWb-Yc-4Qt" firstAttribute="top" secondItem="0oQ-Cm-8C9" secondAttribute="bottom" constant="15" id="iBC-ht-fX3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="qrImageView" destination="0oQ-Cm-8C9" id="POl-ry-vpq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rvc-uW-057" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3477.5999999999999" y="1443.3283358320841"/>
         </scene>
         <!--Item-->
         <scene sceneID="6aa-M8-VkS">
@@ -489,7 +1072,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Recipes" image="recipe-icon" landscapeImage="recipe-icon" id="MH4-JJ-UWm" userLabel="Recipes"/>
-                    <navigationItem key="navigationItem" id="ebD-Q1-ovR">
+                    <navigationItem key="navigationItem" title="Recipes" id="ebD-Q1-ovR">
                         <barButtonItem key="backBarButtonItem" title="Back" id="bfa-Gc-29U"/>
                     </navigationItem>
                     <connections>
@@ -539,9 +1122,11 @@
     </scenes>
     <resources>
         <image name="background" width="1214" height="1214"/>
+        <image name="coupon-icon" width="24" height="24"/>
+        <image name="manage-icon" width="24" height="24"/>
         <image name="recipe-icon" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="UeE-8Y-DPu"/>
+        <segue reference="jWP-xm-zjD"/>
     </inferredMetricsTieBreakers>
 </document>

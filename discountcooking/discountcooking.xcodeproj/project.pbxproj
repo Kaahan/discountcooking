@@ -20,6 +20,10 @@
 		D5285BFE1FAE49B9004C3BC7 /* ingredientsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5285BFD1FAE49B9004C3BC7 /* ingredientsCell.xib */; };
 		D5285C001FAE4C1B004C3BC7 /* directionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5285BFF1FAE4C1B004C3BC7 /* directionCell.swift */; };
 		D5285C021FAE4C25004C3BC7 /* directionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5285C011FAE4C25004C3BC7 /* directionCell.xib */; };
+		D52DEB4F1FC795D800E058CF /* KeyboardLayoutConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52DEB4E1FC795D800E058CF /* KeyboardLayoutConstraints.swift */; };
+		D53488611FC8B2EF006B394D /* ManageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53488601FC8B2EF006B394D /* ManageController.swift */; };
+		D53488651FC8BC2D006B394D /* CreateRecipeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53488641FC8BC2D006B394D /* CreateRecipeController.swift */; };
+		D53488671FC8BC39006B394D /* CreateCouponController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53488661FC8BC39006B394D /* CreateCouponController.swift */; };
 		D54FEECD1F94A31400E404C7 /* SignupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54FEECC1F94A31400E404C7 /* SignupController.swift */; };
 		D54FEEF01F94AA9300E404C7 /* KaedeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54FEEEF1F94AA9300E404C7 /* KaedeTextField.swift */; };
 		D54FEEF11F94AAAA00E404C7 /* TextFieldEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54FEED91F94A6AE00E404C7 /* TextFieldEffects.swift */; };
@@ -35,7 +39,6 @@
 		D56C94311F958EF00056BCCE /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56C94301F958EF00056BCCE /* Recipe.swift */; };
 		D56C94351F958F220056BCCE /* RecipeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56C94341F958F220056BCCE /* RecipeController.swift */; };
 		D575D3DF1F9FAB35006EE35A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D575D3DE1F9FAB35006EE35A /* GoogleService-Info.plist */; };
-		D575D3E21FA18798006EE35A /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D575D3E11FA18798006EE35A /* ProfileController.swift */; };
 		D575D3E61FA1891E006EE35A /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D575D3E51FA1891E006EE35A /* CurrentUser.swift */; };
 		D575D3E81FA18971006EE35A /* helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D575D3E71FA18971006EE35A /* helper.swift */; };
 		D57EC8631FAE44680056976E /* descriptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D57EC8621FAE44680056976E /* descriptionCell.xib */; };
@@ -44,8 +47,14 @@
 		D5956A601F972C190088BB47 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5956A5F1F972C190088BB47 /* Restaurant.swift */; };
 		D5956A621F972C450088BB47 /* Coupon.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5956A611F972C450088BB47 /* Coupon.swift */; };
 		D5956A641F981B830088BB47 /* seed.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5956A631F981B830088BB47 /* seed.swift */; };
+		D5A2A6C81FCF8928002491FF /* RestaurantSignupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A2A6C71FCF8928002491FF /* RestaurantSignupController.swift */; };
 		D5B882F61FB7A3FD008A369B /* uploadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B882F51FB7A3FD008A369B /* uploadCell.swift */; };
 		D5B882F81FB7A4BF008A369B /* uploadCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5B882F71FB7A4BF008A369B /* uploadCell.xib */; };
+		D5E13EEA1FC222EF000554EB /* RestaurantLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C021C91FC2209A00A6BA70 /* RestaurantLoginController.swift */; };
+		D5E13EED1FC22AAC000554EB /* VerifyQRController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E13EEB1FC228B7000554EB /* VerifyQRController.swift */; };
+		D5F09CBB1FC1FEEA009E4818 /* CouponController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F09CBA1FC1FEEA009E4818 /* CouponController.swift */; };
+		D5F09CBF1FC1FFA5009E4818 /* couponControllerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F09CBE1FC1FFA5009E4818 /* couponControllerCell.swift */; };
+		D5F09CC11FC200CF009E4818 /* IndividualCouponController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F09CC01FC200CF009E4818 /* IndividualCouponController.swift */; };
 		DC4FB782315734CA528DB74C /* Pods_discountcookingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 399315F96EA5B74B3F3C618D /* Pods_discountcookingTests.framework */; };
 		E5A203801B3E8E1624FFC326 /* Pods_discountcookingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C0F6A3EC6DF41141874C226 /* Pods_discountcookingUITests.framework */; };
 /* End PBXBuildFile section */
@@ -102,6 +111,10 @@
 		D5285BFD1FAE49B9004C3BC7 /* ingredientsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ingredientsCell.xib; sourceTree = "<group>"; };
 		D5285BFF1FAE4C1B004C3BC7 /* directionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = directionCell.swift; sourceTree = "<group>"; };
 		D5285C011FAE4C25004C3BC7 /* directionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = directionCell.xib; sourceTree = "<group>"; };
+		D52DEB4E1FC795D800E058CF /* KeyboardLayoutConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardLayoutConstraints.swift; sourceTree = "<group>"; };
+		D53488601FC8B2EF006B394D /* ManageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageController.swift; sourceTree = "<group>"; };
+		D53488641FC8BC2D006B394D /* CreateRecipeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRecipeController.swift; sourceTree = "<group>"; };
+		D53488661FC8BC39006B394D /* CreateCouponController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCouponController.swift; sourceTree = "<group>"; };
 		D54FEECC1F94A31400E404C7 /* SignupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupController.swift; sourceTree = "<group>"; };
 		D54FEED01F94A6AE00E404C7 /* AkiraTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AkiraTextField.swift; sourceTree = "<group>"; };
 		D54FEED11F94A6AE00E404C7 /* HoshiTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoshiTextField.swift; sourceTree = "<group>"; };
@@ -135,7 +148,6 @@
 		D56C94301F958EF00056BCCE /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		D56C94341F958F220056BCCE /* RecipeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeController.swift; sourceTree = "<group>"; };
 		D575D3DE1F9FAB35006EE35A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		D575D3E11FA18798006EE35A /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		D575D3E51FA1891E006EE35A /* CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
 		D575D3E71FA18971006EE35A /* helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = helper.swift; sourceTree = "<group>"; };
 		D57EC8621FAE44680056976E /* descriptionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = descriptionCell.xib; sourceTree = "<group>"; };
@@ -144,8 +156,14 @@
 		D5956A5F1F972C190088BB47 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		D5956A611F972C450088BB47 /* Coupon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coupon.swift; sourceTree = "<group>"; };
 		D5956A631F981B830088BB47 /* seed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = seed.swift; sourceTree = "<group>"; };
+		D5A2A6C71FCF8928002491FF /* RestaurantSignupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantSignupController.swift; sourceTree = "<group>"; };
 		D5B882F51FB7A3FD008A369B /* uploadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = uploadCell.swift; sourceTree = "<group>"; };
 		D5B882F71FB7A4BF008A369B /* uploadCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = uploadCell.xib; sourceTree = "<group>"; };
+		D5C021C91FC2209A00A6BA70 /* RestaurantLoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantLoginController.swift; sourceTree = "<group>"; };
+		D5E13EEB1FC228B7000554EB /* VerifyQRController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyQRController.swift; sourceTree = "<group>"; };
+		D5F09CBA1FC1FEEA009E4818 /* CouponController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponController.swift; sourceTree = "<group>"; };
+		D5F09CBE1FC1FFA5009E4818 /* couponControllerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = couponControllerCell.swift; sourceTree = "<group>"; };
+		D5F09CC01FC200CF009E4818 /* IndividualCouponController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualCouponController.swift; sourceTree = "<group>"; };
 		E8C63A7A0308879D97E5B11D /* Pods-discountcookingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-discountcookingTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-discountcookingTests/Pods-discountcookingTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -241,6 +259,7 @@
 			children = (
 				D54FEED91F94A6AE00E404C7 /* TextFieldEffects.swift */,
 				D54FEEEF1F94AA9300E404C7 /* KaedeTextField.swift */,
+				D52DEB4E1FC795D800E058CF /* KeyboardLayoutConstraints.swift */,
 			);
 			path = ViewElements;
 			sourceTree = "<group>";
@@ -329,8 +348,15 @@
 				D51E11A41F94A2B600962876 /* LoginController.swift */,
 				D54FEECC1F94A31400E404C7 /* SignupController.swift */,
 				D56C94341F958F220056BCCE /* RecipeController.swift */,
-				D575D3E11FA18798006EE35A /* ProfileController.swift */,
 				D51BF1BB1FAD0DBC00F2A595 /* IndividualRecipeController.swift */,
+				D5F09CBA1FC1FEEA009E4818 /* CouponController.swift */,
+				D5F09CC01FC200CF009E4818 /* IndividualCouponController.swift */,
+				D5C021C91FC2209A00A6BA70 /* RestaurantLoginController.swift */,
+				D5A2A6C71FCF8928002491FF /* RestaurantSignupController.swift */,
+				D5E13EEB1FC228B7000554EB /* VerifyQRController.swift */,
+				D53488601FC8B2EF006B394D /* ManageController.swift */,
+				D53488641FC8BC2D006B394D /* CreateRecipeController.swift */,
+				D53488661FC8BC39006B394D /* CreateCouponController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -349,6 +375,7 @@
 				D519C8AB1FB3CEE40036E40D /* imageCell.xib */,
 				D5B882F51FB7A3FD008A369B /* uploadCell.swift */,
 				D5B882F71FB7A4BF008A369B /* uploadCell.xib */,
+				D5F09CBE1FC1FFA5009E4818 /* couponControllerCell.swift */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -660,9 +687,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-discountcooking/Pods-discountcooking-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/ImageRow/ImageRow.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/QRCode/QRCode.framework",
+				"${BUILT_PRODUCTS_DIR}/QRCodeReader.swift/QRCodeReader.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
@@ -670,9 +702,14 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Eureka.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImageRow.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QRCode.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QRCodeReader.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -693,24 +730,33 @@
 				D55B53631F940DC300C13C47 /* ViewController.swift in Sources */,
 				D57EC8671FAE45190056976E /* descriptionCell.swift in Sources */,
 				D5956A5E1F972ABA0088BB47 /* recipeControllerCell.swift in Sources */,
+				D5F09CC11FC200CF009E4818 /* IndividualCouponController.swift in Sources */,
 				D5285BFA1FAE49AB004C3BC7 /* ingredientsCell.swift in Sources */,
 				D519C8A81FB3CEC50036E40D /* imageCell.swift in Sources */,
+				D53488651FC8BC2D006B394D /* CreateRecipeController.swift in Sources */,
 				D51E11A51F94A2B600962876 /* LoginController.swift in Sources */,
+				D5F09CBB1FC1FEEA009E4818 /* CouponController.swift in Sources */,
 				D5956A641F981B830088BB47 /* seed.swift in Sources */,
 				D5B882F61FB7A3FD008A369B /* uploadCell.swift in Sources */,
 				D51BF1C01FAD1E8900F2A595 /* IndividualViewModel.swift in Sources */,
+				D5F09CBF1FC1FFA5009E4818 /* couponControllerCell.swift in Sources */,
 				D54FEEF01F94AA9300E404C7 /* KaedeTextField.swift in Sources */,
 				D54FEECD1F94A31400E404C7 /* SignupController.swift in Sources */,
-				D575D3E21FA18798006EE35A /* ProfileController.swift in Sources */,
 				D550785A1F948B3100375C5B /* InitialController.swift in Sources */,
+				D53488671FC8BC39006B394D /* CreateCouponController.swift in Sources */,
 				D55B53611F940DC300C13C47 /* AppDelegate.swift in Sources */,
 				D51E11A31F949F2000962876 /* constants.swift in Sources */,
 				D575D3E61FA1891E006EE35A /* CurrentUser.swift in Sources */,
 				D550785C1F9492E300375C5B /* extensions.swift in Sources */,
+				D5A2A6C81FCF8928002491FF /* RestaurantSignupController.swift in Sources */,
+				D5E13EED1FC22AAC000554EB /* VerifyQRController.swift in Sources */,
+				D53488611FC8B2EF006B394D /* ManageController.swift in Sources */,
 				D54FEEF11F94AAAA00E404C7 /* TextFieldEffects.swift in Sources */,
 				D56C94351F958F220056BCCE /* RecipeController.swift in Sources */,
 				D575D3E81FA18971006EE35A /* helper.swift in Sources */,
+				D5E13EEA1FC222EF000554EB /* RestaurantLoginController.swift in Sources */,
 				D56C94311F958EF00056BCCE /* Recipe.swift in Sources */,
+				D52DEB4F1FC795D800E058CF /* KeyboardLayoutConstraints.swift in Sources */,
 				D5285C001FAE4C1B004C3BC7 /* directionCell.swift in Sources */,
 				D5956A621F972C450088BB47 /* Coupon.swift in Sources */,
 				D51BF1BC1FAD0DBC00F2A595 /* IndividualRecipeController.swift in Sources */,

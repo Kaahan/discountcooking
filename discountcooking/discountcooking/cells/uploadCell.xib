@@ -19,7 +19,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TR9-m9-TBA">
-                        <rect key="frame" x="162" y="6" width="50" height="30"/>
+                        <rect key="frame" x="-0.5" y="6" width="375" height="30"/>
                         <state key="normal" title="Upload"/>
                         <connections>
                             <action selector="uploadTapped:" destination="aq3-8l-Kdo" eventType="touchUpInside" id="YmM-Rf-gFc"/>
@@ -29,6 +29,7 @@
                 <constraints>
                     <constraint firstItem="TR9-m9-TBA" firstAttribute="centerY" secondItem="bwe-xF-c5h" secondAttribute="centerY" id="IDu-W6-aiu"/>
                     <constraint firstItem="TR9-m9-TBA" firstAttribute="centerX" secondItem="bwe-xF-c5h" secondAttribute="centerX" id="OrE-MR-Xvj"/>
+                    <constraint firstItem="TR9-m9-TBA" firstAttribute="width" secondItem="bwe-xF-c5h" secondAttribute="width" id="iZh-Nh-m7M"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

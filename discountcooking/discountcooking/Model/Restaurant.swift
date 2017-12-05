@@ -10,21 +10,20 @@ import Foundation
 
 class Restaurant {
     var name: String = ""
-    var recipes: [Recipe] = []
+    var recipes: [String] = []
     var restaurantID: String = ""
-    
+    var verified: Bool = false
+    var phone: String = ""
     init() {
        
     }
     
     func dictToRestaurant(id: String, dict: [String:Any?]) {
         self.name = dict["name"] as! String
-        for recipe in dict["recipes"] as! [String] {
-            getRecipe(id: recipe, completion: {(returnedrecipe) in
-                self.recipes.append(returnedrecipe!)
-            })
-        }
+        self.recipes = dict["recipes"] as! [String]
+        self.verified = dict["verified"] as! Bool
         self.restaurantID = id
+        self.phone = dict["phone"] as! String
     }
     
 }

@@ -31,6 +31,7 @@ class SignupController: UIViewController, UITextFieldDelegate {
         let tap = UITapGestureRecognizer(target: self.view, action: Selector("endEditing:"))
         tap.cancelsTouchesInView = false
         self.view.addGestureRecognizer(tap)
+        self.view.backgroundColor = colors["light-grey"]
     }
     @IBAction func signupWasPressed(_ sender: Any) {
         guard let email = signupEmail.text else { return }
@@ -74,7 +75,7 @@ class SignupController: UIViewController, UITextFieldDelegate {
                 }
                 let user = Auth.auth().currentUser
                 let uid: String = (user!.uid)
-                let dict: [String:Any?] = ["uid": uid, "coupons": ["empty"], "doneRecipes": ["empty":"empty"], "role": "customer"]
+                let dict: [String:Any?] = ["uid": uid, "coupons": ["empty":"empty"], "doneRecipes": ["empty":"empty"], "role": "customer"]
                 self.dbRef.child("Users").child(uid).setValue(dict)
                 
             }

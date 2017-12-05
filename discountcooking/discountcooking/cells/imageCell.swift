@@ -14,12 +14,21 @@ class imageCell: UITableViewCell {
     @IBOutlet weak var imageCellImage: UIImageView!
     var item: String? {
         didSet {
-            getDataFromPath(path: item!) { (data) in
-                if let data = data {
-                    let image = UIImage(data: data)
+            DispatchQueue.global(qos: .userInitiated).async {
+                var imageData: Data = Data()
+                getDataFromPath(path: self.item!) { (returnData) in
+                    if let data = returnData {
+                        imageData = data
+                    }
+                }
+                // Bounce back to the main thread to update the UI
+                DispatchQueue.main.async {
+                    let image = UIImage(data: imageData)
                     self.imageCellImage.image = image
                 }
             }
+
+            
         }
     }
     static var nib:UINib {

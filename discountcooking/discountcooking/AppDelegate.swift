@@ -17,6 +17,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
+        UINavigationBar.appearance().barTintColor = colors["apricot"]
+        UINavigationBar.appearance().tintColor = colors["light-grey"]
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: colors["light-grey"], NSAttributedStringKey.font: UIFont(name: "Gravity", size: 17)!]
+        UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font: UIFont(name: "Gravity", size:17)!], for: .normal)
+        UITabBar.appearance().barTintColor = colors["apricot"]
+        UITabBar.appearance().tintColor = colors["light-grey"]
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: colors["light-grey"], NSAttributedStringKey.font: UIFont(name: "Gravity", size: 12)!], for: .normal)
+        
         return true
     }
 

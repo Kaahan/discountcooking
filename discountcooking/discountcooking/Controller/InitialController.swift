@@ -12,14 +12,15 @@ import UIKit
 class InitialController: UIViewController {
     
     @IBOutlet weak var tagline: UILabel!
-    @IBOutlet weak var signup: UIButton!
+    
+    @IBOutlet weak var restaurantLogin: UIButton!
     @IBOutlet weak var login: UIButton!
     @IBOutlet weak var background: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         background.addBlurEffect()
         login.backgroundColor = colors["blueberry"]
-        signup.backgroundColor = colors["citrus"]
+        restaurantLogin.backgroundColor = colors["citrus"]
         let text = "where cooking meets saving"
         let textwithcolor1 = "saving"
         let textwithcolor2 = "cooking"
@@ -37,9 +38,10 @@ class InitialController: UIViewController {
         
     }
     
-    @IBAction func signup(_ sender: Any) {
-        performSegue(withIdentifier: "toSignup", sender: nil)
+    @IBAction func restaurantLogin(_ sender: Any) {
+        performSegue(withIdentifier: "toRestaurantLogin", sender: nil)
     }
+    
     
     @IBAction func unwindToInitial(segue: UIStoryboardSegue) {
         

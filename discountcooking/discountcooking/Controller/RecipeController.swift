@@ -49,7 +49,7 @@ class RecipeController: UIViewController, UITableViewDelegate, UITableViewDataSo
         super.viewDidLoad()
         recipeTable.dataSource = self
         recipeTable.delegate = self
-        
+        recipeTable.backgroundColor = colors["light-grey"]
     }
     override func viewWillAppear(_ animated: Bool) {
         if individualDidReturn == true {
@@ -61,11 +61,17 @@ class RecipeController: UIViewController, UITableViewDelegate, UITableViewDataSo
                 newDoneRecipes = doneRecipes
                 newDoneRecipes[self.doneRecipe.recipeID!] = self.imagePath
                 user.updateChildValues(["doneRecipes" : newDoneRecipes])
-                self.doneRecipe = Recipe()
-                self.individualDidReturn = false
-                self.imagePath = ""
-                self.updateData()
-                self.recipeTable.reloadData()
+                self.currentUser.getCoupons(completion: { (coupons) in
+                    var newCoupons = coupons
+                    newCoupons[(self.doneRecipe.coupon)] = self.doneRecipe.recipeID
+                    user.updateChildValues(["coupons" : newCoupons])
+                    self.doneRecipe = Recipe()
+                    self.individualDidReturn = false
+                    self.imagePath = ""
+                    self.updateData()
+                    self.recipeTable.reloadData()
+                })
+                
                 
                 
             })
@@ -123,7 +129,23 @@ class RecipeController: UIViewController, UITableViewDelegate, UITableViewDataSo
         recipeArray = []
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return recipeArray.count
+        var number = recipeArray.count
+        if number != 0 {
+            tableView.separatorStyle = .singleLine
+            tableView.backgroundView = nil
+        } else {
+            
+            let noDataLabel: UILabel     = UILabel(frame: CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: tableView.bounds.size.height))
+            noDataLabel.text          = "You've finished all the recipes we have for now, check back later!"
+            noDataLabel.textColor     = colors["blueberry"]
+            noDataLabel.textAlignment = .center
+            noDataLabel.font = UIFont(name: "Gravity-Light", size: 17)
+            noDataLabel.numberOfLines = 0
+            tableView.backgroundView  = noDataLabel
+            tableView.separatorStyle  = .none
+            
+        }
+        return number
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = recipeTable.dequeueReusableCell(withIdentifier: "recipeCell", for: indexPath) as! recipeControllerCell
@@ -138,6 +160,9 @@ class RecipeController: UIViewController, UITableViewDelegate, UITableViewDataSo
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "toIndividualRecipe", sender: recipeArray[indexPath.row])
+    }
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.backgroundColor = UIColor.clear
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let dest = segue.destination as? IndividualRecipeController {
