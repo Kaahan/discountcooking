@@ -36,6 +36,9 @@ class RestaurantSignupController: UIViewController, UITextFieldDelegate {
         self.view.addGestureRecognizer(tap)
         self.view.backgroundColor = colors["light-grey"]
     }
+    @IBAction func backWasPressed(_ sender: Any) {
+        performSegue(withIdentifier: "unwindToRestaurantLogin", sender: nil)
+    }
     @IBAction func signupWasPressed(_ sender: Any) {
         guard let email = signupEmail.text else { return }
         guard let password = signupPass.text else { return }

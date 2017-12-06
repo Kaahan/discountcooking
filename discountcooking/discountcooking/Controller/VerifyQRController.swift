@@ -19,6 +19,7 @@ class VerifyQRController: UIViewController, QRCodeReaderViewControllerDelegate  
     var uid: String = ""
     var couponID: String = ""
     
+    @IBOutlet weak var couponValueLabel: UILabel!
     @IBOutlet weak var declineButton: UIButton!
     @IBOutlet weak var acceptButton: UIButton!
     lazy var readerVC: QRCodeReaderViewController = {
@@ -48,6 +49,7 @@ class VerifyQRController: UIViewController, QRCodeReaderViewControllerDelegate  
         acceptButton.isHidden = true
         declineButton.isHidden = true
         recipeNameLabel.isHidden = true
+        couponValueLabel.isHidden = true
     }
     @IBAction func declineClick(_ sender: Any) {
         print("memes")
@@ -104,6 +106,11 @@ class VerifyQRController: UIViewController, QRCodeReaderViewControllerDelegate  
                                                     getRecipe(id: recipekey, completion: { (recipe) in
                                                         self.recipeNameLabel.text = recipe!.name
                                                         self.recipeNameLabel.isHidden = false
+                                                    })
+                                                    
+                                                    getCoupon(id: couponID, completion: { (coupon) in
+                                                        self.couponValueLabel.text = "$\(String(describing: coupon!.value))"
+                                                        self.couponValueLabel.isHidden = false
                                                     })
                                                 }
                                             }

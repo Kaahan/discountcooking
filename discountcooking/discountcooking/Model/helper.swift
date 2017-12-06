@@ -88,6 +88,29 @@ func getRecipe(id: String, completion: @escaping (Recipe?) -> Void) {
         }
     }
 }
+func getCoupon(id: String, completion: @escaping (Coupon?) -> Void) {
+    let dbRef = Database.database().reference()
+    dbRef.child(firCouponsNode).observeSingleEvent(of: .value) { (snapshot) in
+        if snapshot.exists() {
+            if let coupons = snapshot.value as? [String:AnyObject] {
+                for key in coupons.keys {
+                    if let returnedcoupon = coupons[key] as? [String:Any] {
+                        if key == id {
+                            var coupon = Coupon()
+                            coupon.dictToCoupon(dict: returnedcoupon, key: key)
+                            completion(coupon)
+                        }
+                    }
+                    
+                }
+            } else {
+                completion(nil)
+            }
+        } else {
+            completion(nil)
+        }
+    }
+}
 func createRecipe(recipe: Recipe, image: UIImage, coupon: Coupon, restaurantID: String) {
     let dbRef = Database.database().reference()
     let uuid = NSUUID().uuidString

@@ -37,7 +37,7 @@ class RestaurantLoginController: UIViewController, UITextFieldDelegate {
     override func viewWillDisappear(_ animated: Bool) {
         Auth.auth().removeStateDidChangeListener(handle!)
     }
-    @IBAction func unwindToLogin(segue:UIStoryboardSegue) {
+    @IBAction func unwindToRestaurantLogin(segue:UIStoryboardSegue) {
         
     }
     @IBAction func restaurantLogin(_ sender: Any) {
