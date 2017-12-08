@@ -31,7 +31,11 @@ class CreateCouponController: FormViewController {
             let dict: [String:Any] = ["value": string_coupon_value, "percent": "0.0", "recipes": ["empty"], "restaurant": CurrentUser().id]
             var new_coupon = Coupon()
             new_coupon.dictToCoupon(dict: dict, key: "")
-            createCoupon(coupon: new_coupon)
+            createCoupon(coupon: new_coupon, restaurantID: CurrentUser().id)
+            let alertController = UIAlertController(title: "Coupon Created!", message: "", preferredStyle: .alert)
+            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alertController.addAction(defaultAction)
+            self.present(alertController, animated: true, completion: nil)
         } else {
             
         }

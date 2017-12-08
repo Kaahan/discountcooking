@@ -186,9 +186,24 @@ func getCoupons(completion: @escaping ([Coupon]?) -> Void) {
         }
     }
 }
-func createCoupon(coupon: Coupon) {
+func createCoupon(coupon: Coupon, restaurantID: String) {
     let dbRef = Database.database().reference()
-    dbRef.child(firCouponsNode).childByAutoId().setValue(coupon.couponToDict())
+    let ref = dbRef.child(firCouponsNode).childByAutoId()
+    let couponID = ref.key
+    ref.setValue(coupon.couponToDict())
+    var restaurantCoupons: [String] = []
+    getCoupons { (coupons) in
+        if let coupon_array = coupons {
+            for coupon in coupon_array {
+                if coupon.restaurant == restaurantID {
+                    restaurantCoupons.append(coupon.couponID)
+                }
+            }
+            restaurantCoupons.append(couponID)
+            dbRef.child(firRestaurantsNode).child(restaurantID).updateChildValues(["coupons" : restaurantCoupons])
+        }
+    }
+    
 }
 
 func getRestaurants(completion: @escaping ([String]) -> Void) {

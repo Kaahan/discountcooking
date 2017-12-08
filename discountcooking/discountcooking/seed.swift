@@ -45,5 +45,5 @@ func seedDatabase() {
     let coupondict: [String:Any?] = ["value": "2", "percent": "0.0", "recipes": ["empty"], "restaurant": "1"]
     let coupon = Coupon()
     coupon.dictToCoupon(dict: coupondict, key: "")
-    createCoupon(coupon: coupon)
+    createCoupon(coupon: coupon, restaurantID: CurrentUser().id)
 }
